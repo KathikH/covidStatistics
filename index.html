@@ -2,31 +2,80 @@
 <html>
 <head>
     <meta charset="UTF-8">
+    <title>Corona-Dashboard</title>
+
     <link rel="stylesheet" href="css/bootstrap.minNeu.css">
     <link rel="stylesheet" href="css/index.css"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="pics/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="pics/favicon-16x16.png">
+
     <script src="https://www.gstatic.com/charts/loader.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
     <script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/plugins/wordCloud.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
     <script src="https://cdn.amcharts.com/lib/4/themes/material.js"></script>
     <script src="https://cdn.amcharts.com/lib/4/lang/de_DE.js"></script>
     <script src="https://cdn.amcharts.com/lib/4/geodata/germanyLow.js"></script>
     <script src="https://cdn.amcharts.com/lib/4/fonts/notosans-sc.js"></script>
-    <title>Corona-Dashboard</title>
+    <script type="text/javascript" src="js/geomap.js"></script>
+    <script type="text/javascript" src="js/areachart.js"></script>
+    <script type="text/javascript" src="js/trendlineChart.js"></script>
+    <script type="text/javascript" src="js/wordCloud.js"></script>
 </head>
 
 <body>
-<nav class="navbar navbar-expand-lg border-bottom">
-    <a class="navbar-brand active" href="index.html">Home</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-</nav>
-
-<canvas id="myChart" width="400" height="400"></canvas>
-
+<div class="row">
+    <div class="col-1">
+        <div class="card text-center" style="background-color: #0c5460">
+            <div class="card-block">
+                <div class="card-text" style="font-size: xx-large; color: white; font-weight: bold">10</div>
+                <p>Punkte für Gryffindor</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-5">
+        <div id="word_cloud"></div>
+    </div>
+    <div class="col-5">
+        <div class="card text-center">
+            <div class="card-header">Inzidenzzahlenentwicklung</div>
+            <div class="card-block">
+                <div id="area_chart" style="width: 100%; height: 300px;"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row" style="height: 20px">
+    <div class="col-4">
+    </div>
+    <div class="col-2">
+    </div>
+    <div class="col-6">
+    </div>
+</div>
+<div class="row">
+    <div class="col-4">
+        <div class="card text-center">
+            <div class="card-header">Geo Map</div>
+            <div class="card-block">
+                <div id="de_map" style="width: 490px; height: 303px;"></div>
+            </div>
+        </div>
+    </div>
+    <div class="col-2">
+    </div>
+    <div class="col-5">
+        <div class="card text-center">
+            <div class="card-header">Trendlinie</div>
+            <div class="card-block">
+                <div id="trendline_Chart" style="width: 100%; height: 300px;"></div>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 
 </html>

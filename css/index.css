@@ -1,76 +1,50 @@
-.card-group {
-    margin: 0 auto;
-    float: none;
-    margin-bottom: 10px;
-    margin-left: 10rem;
-    margin-right: 10rem;
+body {
+    position: fixed;
+    background-image: url(../pics/grey-background.jpg);
+    width: 100%;
+    margin-top: 2rem;
+    margin-left: 5rem;
+}
+
+a {
+    color: white;
+    font-weight: bold;
+    font-style: normal;
+}
+
+h1, h2 {
+    color: white;
+    font-style: normal;
+    width: 100%;
     text-align: center;
 }
 
-body {
-    position: fixed;
-    overflow-y: scroll;
+#de_map svg path[fill^='none'] {
+    stroke-width:0px; /*Umrandungen der datenlosen Länder*/
+}
+
+#word_cloud {
     width: 100%;
+    height: 400px;
 }
 
 .card {
-    background-color: whitesmoke;
-    border-color: #444544;
+    background-color: #1b1e21;
 }
 
-img {
-    width: 90%;
-    height: 85%;
+.card-header {
+    color: white;
 }
 
-a{
-    color:white;
-    font-weight: bold;
-    font-style:normal;
+.col {
+    border-left: white;
+    border-right: white;
 }
 
-.navbar-expand-lg{
-    background-color: #444544;
-    border-bottom-color: black;
+.row {
+    border-bottom: white;
 }
 
-.navbar a:hover {
-    color: black;
-}
-
-.navbar-collapse ul li a:hover {
-    color: black;
-}
-
-.active {
-    text-decoration: underline;
-}
-
-h1 {
-    color: navajowhite;
-    font-style:normal;
-    width: 100%;
-    text-align: center;
-    margin-bottom: 1rem;
-    margin-top: 2rem;
-}
-
-h2 {
-    color: navajowhite;
-    font-style:normal;
-    width: 100%;
-    text-align: center;
-    margin-bottom: 2rem;
-}
-
-table {
-    border-collapse: collapse;
-}
-
-body {
-    background-color: dimgrey;
-}
-
-table th, table td {
-    padding: 5px;
+p {
+    color: white;
 }
