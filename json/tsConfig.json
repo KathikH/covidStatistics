@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "allowJs": true,
+    "outDir": "build"
+  },
+  "exclude": ["node_modules", "createEnv.js", "build/"]
+}

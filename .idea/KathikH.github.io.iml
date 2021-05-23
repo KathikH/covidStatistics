@@ -5,7 +5,6 @@
     <content url="file://$MODULE_DIR$" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="loader" level="application" />
     <orderEntry type="library" name="chart.js" level="application" />
     <orderEntry type="library" name="apexcharts" level="application" />
     <orderEntry type="library" name="core" level="application" />
@@ -14,5 +13,7 @@
     <orderEntry type="library" name="material" level="application" />
     <orderEntry type="library" name="de_DE" level="application" />
     <orderEntry type="library" name="germanyLow" level="application" />
+    <orderEntry type="library" name="animated" level="application" />
+    <orderEntry type="library" name="wordCloud" level="application" />
   </component>
 </module>
