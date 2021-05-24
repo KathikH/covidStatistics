@@ -2,6 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Corona-Dashboard</title>
 
     <link rel="stylesheet" href="css/bootstrap.minNeu.css">
@@ -26,61 +27,53 @@
     <script src="https://cdn.amcharts.com/lib/4/maps.js"></script>
 
     <script type="text/javascript" src="js/geomap.js"></script>
-    <script type="text/javascript" src="js/areachart.js"></script>
+    <script type="text/javascript" src="js/area.js"></script>
     <script type="text/javascript" src="js/wordCloud.js"></script>
     <script type="text/javascript" src="js/trendlineChart.js"></script>
     <script type="text/javascript" src="js/gauge.js"></script>
     <script type="text/javascript" src="js/germanyHeatmap.js"></script>
-<!--    <script type="text/javascript" src="js/basicPieChart.js"></script>-->
-<!--    <script type="text/javascript" src="js/script.js"></script>-->
+    <script type="text/javascript" src="js/pieChart.js"></script>
+    <script type="text/javascript" src="js/donutChart.js"></script>
 </head>
 
 <body>
-<div class="row" style="height: 10px">
-    <div class="col-4">
-    </div>
-    <div class="col-2">
-    </div>
-    <div class="col-6">
-    </div>
-</div>
-<div class="row">
+<div class="row" style="height: 38vh">
     <div class="col-2">
         <div class="card text-center">
-            <div class="card-block" style="height: 160px;">
-                <div class="card-block" style="height: 217px;">
-                    <div class="card-header">Punkte für Gryffindor</div>
-                    <div class="card-text">10</div>
-                </div>
+            <div class="card-block">
+                <div class="card-header">Punkte für Gryffindor</div>
+                <div class="card-text firstlineKeyValues">10</div>
             </div>
         </div>
-        <div style="height: 6%;"></div>
+        <div class="middleline"></div>
         <div class="card text-center">
-            <div class="card-block" style="height: 160px;">
-                <div class="card-block" style="height: 217px;">
-                    <div class="card-header">Zufrieden mit der Politik</div>
-                    <div class="card-text">62%</div>
-                </div>
+            <div class="card-block">
+                <div class="card-header">Zufrieden mit der Politik</div>
+                <div class="card-text firstlineKeyValues">62%</div>
             </div>
         </div>
     </div>
     <div class="col-5">
         <div class="card text-center">
-            <div class="card-header">Mood-O-Meter</div>
+            <!--            <div class="card-header">Mood-O-Meter</div>-->
+            <div class="card-header">Kuchendiagramm</div>
             <div class="card-block">
-                <div id="gauge" style="width: 100%; height: 300px;"></div>
+                <!--                <div id="gauge" class="firstlineChart"></div>-->
+                <div id="donutChart" class="firstlineChart"></div>
+                <!--                <div id="pieChart" class="firstlineChart"></div> <div id="pieChartLegend" class="firstlineChart"></div>-->
             </div>
         </div>
     </div>
     <div class="col-4">
         <div class="card text-center">
             <div class="card-block">
-                <div id="word_cloud" style="width: 100%; height: 350px;"></div>
+                <div class="card-header">Top Amazon-Suchbegriffe März 2020</div>
+                <div id="word_cloud" class="firstlineChart"></div>
             </div>
         </div>
     </div>
 </div>
-<div class="row" style="height: 30px">
+<div class="row" style="height: 3.2vh">
     <div class="col-4">
     </div>
     <div class="col-2">
@@ -88,30 +81,28 @@
     <div class="col-6">
     </div>
 </div>
-<div class="row">
+<div class="row" style="height: 45vh">
     <div class="col-4">
         <div class="card text-center">
             <div class="card-header">Geo Map</div>
             <div class="card-block text-center">
                 <!--                <div id="de_map" style="width: 100%; height: 414px;"></div>-->
-                <div id="germanyHeatmap" style="width: 100%; height: 414px;"></div>
+                <div id="germanyHeatmap" class="secondlineChart"></div>
             </div>
         </div>
     </div>
     <div class="col-2">
         <div class="card text-center">
-            <div class="card-block" style="height: 217px;">
-                <div class="card-block" style="height: 217px;">
-                    <div class="card-header">Kriminalitätsrate</div>
-                    <div class="card-text" style="font-size: 90px">-2,3%</div>
-                </div>
+            <div class="card-block">
+                <div class="card-header">Kriminalitätsrate</div>
+                <div class="card-text secondlineKeyValues">-2,3%</div>
             </div>
         </div>
-        <div style="height: 6%;"></div>
+        <div class="middleline"></div>
         <div class="card text-center">
-            <div class="card-block" style="height: 217px;">
+            <div class="card-block">
                 <div class="card-header">Punkte für Gryffindor</div>
-                <div class="card-text" style="font-size: 90px">10</div>
+                <div class="card-text secondlineKeyValues">10</div>
             </div>
         </div>
     </div>
@@ -119,7 +110,7 @@
         <div class="card text-center">
             <div class="card-header">Inzidenzzahlenentwicklung</div>
             <div class="card-block">
-                <div id="area_chart" style="width: 100%; height: 414px;"></div>
+                <div id="areaChart" class="secondlineChart"></div>
                 <!--                <div id="trendline_Chart" style="width: 100%; height: 300px;"></div>-->
             </div>
         </div>
