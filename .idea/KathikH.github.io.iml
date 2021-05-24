@@ -23,5 +23,9 @@
     <orderEntry type="library" name="notosans-sc" level="application" />
     <orderEntry type="library" name="wordCloud" level="application" />
     <orderEntry type="library" name="animated" level="application" />
+    <orderEntry type="library" name="maps" level="application" />
+    <orderEntry type="library" name="worldLow" level="application" />
+    <orderEntry type="library" name="usaLow" level="application" />
+    <orderEntry type="library" name="vue" level="application" />
   </component>
 </module>

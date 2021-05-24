@@ -9,19 +9,19 @@ function drawChart() {
         hAxis: {
             title: 'Tag',
             minValue: 10,
-            titleTextStyle: {color: '#FFFFFF', italic: false},
-            textStyle: {color: '#FFFFFF'}
+            titleTextStyle: {color: '#000000', italic: false},
+            textStyle: {color: '#000000'}
         },
         vAxis: {
             title: 'Inzidenzwert in Tausend',
             minValue: 0,
-            titleTextStyle: {color: '#FFFFFF', italic: false},
-            textStyle: {color: '#FFFFFF'}
+            titleTextStyle: {color: '#000000', italic: false},
+            textStyle: {color: '#000000'}
         },
         trendlines: {0: {}},
         backgroundColor: {fill: 'transparent'},
-        colors: ['90ee90'],
-        legend: {textStyle: {color: '#FFFFFF'}}
+        colors: ['9b6dff'],
+        legend: {textStyle: {color: '#000000'}}
     };
 
     var chart = new google.visualization.ScatterChart(document.getElementById('trendline_Chart'));

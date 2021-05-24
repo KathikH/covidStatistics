@@ -5,29 +5,30 @@ function drawRegionsMap() {
     var data = new google.visualization.DataTable();
     data.addColumn('string', 'Land');
     data.addColumn('number', '7-Tage-Inzidenzwert');
-    data.addRows([[{f: 'Baden-Württemberg', v: 'DE-BW'}, 109],
-        [{f: 'Bayern', v: 'DE-BY'}, 129],
-        [{f: 'Berlin', v: 'DE-BE'}, 89],
-        [{f: 'Brandenburg', v: 'DE-BB'}, 104],
-        [{f: 'Bremen', v: 'DE-HB'}, 122],
-        [{f: 'Hamburg', v: 'DE-HH'}, 109],
-        [{f: 'Hessen', v: 'DE-HE'}, 112],
-        [{f: 'Mecklenburg-Vorpommern', v: 'DE-MV'}, 95],
-        [{f: 'Niedersachsen', v: 'DE-NI'}, 82],
-        [{f: 'Nordrhein-Westfalen', v: 'DE-NW'}, 109],
-        [{f: 'Rheinland-Pfalz', v: 'DE-RP'}, 91],
-        [{f: 'Saarland', v: 'DE-SL'}, 91],
-        [{f: 'Sachsen', v: 'DE-SN'}, 151],
-        [{f: 'Sachsen-Anhalt', v: 'DE-ST'}, 129],
-        [{f: 'Schleswig-Holstein', v: 'DE-SH'}, 65],
-        [{f: 'Thüringen', v: 'DE-TH'}, 187]]);
+    data.addRows([[{f: 'Baden-Württemberg', v: 'DE-BW'}, 80],
+        [{f: 'Bayern', v: 'DE-BY'}, 63],
+        [{f: 'Berlin', v: 'DE-BE'}, 55],
+        [{f: 'Brandenburg', v: 'DE-BB'}, 48],
+        [{f: 'Bremen', v: 'DE-HB'}, 56],
+        [{f: 'Hamburg', v: 'DE-HH'}, 35],
+        [{f: 'Hessen', v: 'DE-HE'}, 75],
+        [{f: 'Mecklenburg-Vorpommern', v: 'DE-MV'}, 41],
+        [{f: 'Niedersachsen', v: 'DE-NI'}, 46],
+        [{f: 'Nordrhein-Westfalen', v: 'DE-NW'}, 69],
+        [{f: 'Rheinland-Pfalz', v: 'DE-RP'}, 56],
+        [{f: 'Saarland', v: 'DE-SL'}, 81],
+        [{f: 'Sachsen', v: 'DE-SN'}, 82],
+        [{f: 'Sachsen-Anhalt', v: 'DE-ST'}, 54],
+        [{f: 'Schleswig-Holstein', v: 'DE-SH'}, 32],
+        [{f: 'Thüringen', v: 'DE-TH'}, 101]]);
 
     var options = {
         'title': 'Map',
         'region': 'DE',
         'resolution': 'provinces',
         datalessRegionColor: 'transparent',
-        colors: ['#8a0303'],
+        // colors: ['#8a0303'], colors: ['#ff333d'], colors: ['#ff4500'], colors: ['#9c343e'], colors: ['#b83d3f'],
+        colors: ['#66c041'],
         backgroundColor: {fill: 'transparent'}
     };
 

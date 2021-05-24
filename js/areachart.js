@@ -23,12 +23,12 @@ function drawChart() {
     ]);
 
     var options = {
-        legend: {textStyle: {color: '#FFFFFF'}},
-        hAxis: {textPosition: 'none', title: '2020-2021', titleTextStyle: {color: '#FFFFFF', italic: false}},
-        vAxis: {minValue: 0, textStyle: {color: '#FFFFFF'}},
-        data: {textStyle: {color: '#ffffff'}},
+        legend: {textStyle: {color: '#000000'}},
+        hAxis: {textPosition: 'none', title: '2020-2021', titleTextStyle: {color: '#000000', italic: false}},
+        vAxis: {minValue: 0, textStyle: {color: '#000000'}},
+        data: {textStyle: {color: '#000000'}},
         backgroundColor: {fill: 'transparent'},
-        colors: ['90ee90']
+        colors: ['3EA9BA']
     };
 
     var chart = new google.visualization.AreaChart(document.getElementById('area_chart'));

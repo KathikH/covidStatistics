@@ -1,0 +1,32 @@
+{
+  "name": "covidstatistics",
+  "version": "1.0.0",
+  "description": "AWE Projekt",
+  "main": "KathikH.github.io.iml",
+  "dependencies": {
+    "apexcharts": "^3.26.3",
+    "cjs": "0.0.11",
+    "loader": "^2.1.1",
+    "mongodb": "^3.6.8",
+    "mongoose": "^5.12.10",
+    "upper-case": "^2.0.2",
+    "vue-apexcharts": "^1.6.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KathikH/KathikH.github.io.git"
+  },
+  "keywords": [
+    "covid"
+  ],
+  "author": "lki",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KathikH/KathikH.github.io/issues"
+  },
+  "homepage": "https://github.com/KathikH/KathikH.github.io#readme"
+}
