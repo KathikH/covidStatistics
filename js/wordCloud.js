@@ -12,21 +12,54 @@ am4core.ready(function () {
     series.rotationThreshold = 0.7;
     series.maxCount = 200;
     series.minWordLength = 2;
-    series.labels.template.tooltipText = "{word}";
-    // series.labels.template.tooltipText = "{word}: {value}";
+    series.labels.template.tooltipText = "{tag}";
+    // series.labels.template.fill = am4core.color("#9F6BA0");
     series.fontFamily = "Courier New";
     series.maxFontSize = am4core.percent(30);
-    series.minColor = '#FFFFFFFF';
-    series.maxColor = '#FFFFFFFF';
 
-    series.text = "maske maske maske maske maske maske maske maske maske maske " +
-        "toilettenpapier toilettenpapier toilettenpapier toilettenpapier toilettenpapier toilettenpapier toilettenpapier toilettenpapier toilettenpapier " +
-        "mundschutz mundschutz mundschutz mundschutz mundschutz mundschutz mundschutz mundschutz " +
-        "nintendo-switch nintendo-switch nintendo-switch nintendo-switch  nintendo-switch  nintendo-switch  nintendo-switch " +
-        "puzzle puzzle puzzle puzzle puzzle puzzle " +
-        "haarschneidemaschine haarschneidemaschine haarschneidemaschine haarschneidemaschine haarschneidemaschine " +
-        "desinfektionsmittel desinfektionsmittel desinfektionsmittel desinfektionsmittel " +
-        "einweghandschuhe einweghandschuhe einweghandschuhe " +
-        "webcam webcam " +
-        "malen-nach-zahlen";
+    series.heatRules.push({
+        "target": series.labels.template,
+        "property": "fill",
+        "min": am4core.color("#0000CC"),
+        "max": am4core.color("#CC00CC"),
+        "dataField": "value"
+    });
+
+    series.labels.template.url = "https://amazon.de/s?k={tag}";
+    series.labels.template.urlTarget = "_blank";
+
+    series.data = [{
+        "tag": "maske",
+        "weight": 19
+    }, {
+        "tag": "toilettenpapier",
+        "weight": 17
+    }, {
+        "tag": "mundschutz",
+        "weight": 15
+    }, {
+        "tag": "nintendo switch",
+        "weight": 13
+    }, {
+        "tag": "puzzle",
+        "weight": 11
+    }, {
+        "tag": "haarschneidemaschine",
+        "weight": 9
+    }, {
+        "tag": "desinfektionsmittel",
+        "weight": 7
+    }, {
+        "tag": "einweghandschuhe",
+        "weight": 5
+    },  {
+        "tag": "webcam",
+        "weight": 3
+    }, {
+        "tag": "malen nach zahlen",
+        "weight": 1
+    }];
+
+    series.dataFields.word = "tag";
+    series.dataFields.value = "weight";
 });

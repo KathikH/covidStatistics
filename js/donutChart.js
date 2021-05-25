@@ -5,46 +5,45 @@ am4core.ready(function () {
 
 // Add data
     chart.data = [{
-        "symtpome": "Lithuania",
-        "haeufigkeit": 501.9
+        "bezeichnung": "Gleichaltrige Kontaktperson",
+        "haeufigkeit": 58.7
     }, {
-        "symtpome": "Czech Republic",
-        "haeufigkeit": 301.9
+        "bezeichnung": "Ältere Kontaktperson",
+        "haeufigkeit": 26.3
     }, {
-        "symtpome": "Ireland",
-        "haeufigkeit": 201.1
-    }, {
-        "symtpome": "Germany",
-        "haeufigkeit": 165.8
-    }, {
-        "symtpome": "Australia",
-        "haeufigkeit": 139.9
-    }, {
-        "symtpome": "Austria",
-        "haeufigkeit": 128.3
-    }, {
-        "symtpome": "The Netherlands",
-        "haeufigkeit": 50,
+        "bezeichnung": "Jüngere Kontaktperson",
+        "haeufigkeit": 14.6
     }];
 
 // Add and configure Series
     var pieSeries = chart.series.push(new am4charts.PieSeries());
     pieSeries.dataFields.value = "haeufigkeit";
-    pieSeries.dataFields.category = "symtpome";
+    pieSeries.dataFields.category = "bezeichnung";
     // pieSeries.dataFields.hidden = "hidden";
 
-// Let's cut a hole in our Pie chart the size of 40% the radius
+// amCharts colors: blue: #6771dc, pink: #c767dc, lightblue: #6794dc, purple: #a367dc, babyblue: #67b7dc, darkpurple: #8067dc
+    pieSeries.colors.list = [
+        am4core.color("#6794dc"), //purple
+        am4core.color("#D65DB1"), //dark pink
+        // am4core.color("#FF6F91"), //pink
+        // am4core.color("#FF9671"), //orange
+        am4core.color("#FFC75F"), //yellow
+        // am4core.color("#F9F871"), //neon yellow
+    ];
+    pieSeries.slices.template.strokeWidth = 2;
+    pieSeries.slices.template.strokeOpacity = 1;
+    pieSeries.slices.template.tooltipText = ""; //"{bezeichnung}";
+
     chart.innerRadius = am4core.percent(40);
+// Let's cut a hole in our Pie chart the size of 40% the radius
 
 // Disable ticks and labels
     pieSeries.labels.template.disabled = true;
     pieSeries.ticks.template.disabled = true;
 
-// Disable tooltips
-    pieSeries.slices.template.tooltipText = "";
-
 // Add a legend
     chart.legend = new am4charts.Legend();
     chart.legend.position = "right";
+    chart.legend.width = am4core.percent(100);
 
 });

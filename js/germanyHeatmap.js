@@ -21,8 +21,8 @@ am4core.ready(function () {
         property: "fill",
         target: polygonSeries.mapPolygons.template,
         // max: chart.colors.getIndex(5).brighten(-0.3)
-        min: am4core.color("#DE9E9B"),
-        max: am4core.color("#FF1818")
+        min: am4core.color("#E9DCBE"), //#DE9E9B
+        max: am4core.color("#FF9671") //#FF1818
     });
 
 // Make map load polygon data (state shapes and names) from GeoJSON
