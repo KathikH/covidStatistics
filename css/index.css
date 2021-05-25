@@ -3,8 +3,8 @@
     --border-color: grey;
     /*--border-color: #bbbbbb;*/
     --font-style: normal;
-    --keyValues-font-size: 6vh;
-    --chart-size: 98%;
+    --keyValues-font-size: 400%;
+    --chart-size: 99%;
     --topRowHeight: 32vh;
     --bottomRowHeight: 44.5vh;
     /*--font-family: Courier, monospace;*/
@@ -49,6 +49,7 @@ body {
     color: dimgrey;
     font-weight: bold;
     border-color: var(--border-color);
+    /*font-size: 25%;*/
     font-size: 1.8vh;
     font-family: var(--font-family);
 }
@@ -92,7 +93,7 @@ body {
 
 .secondlineKeyValues {
     width: 100%;
-    height: 52.2%;
+    height: 52.1%;
     font-size: var(--keyValues-font-size);
 }
 

@@ -120,7 +120,7 @@ am4core.ready(function () {
     series.dataFields.dateX = "year";
     series.name = "cars";
     series.dataFields.valueY = "cars";
-    series.tooltipHTML = "<img src='https://www.amcharts.com/lib/3/images/car.png' style='vertical-align:bottom; margin-right: 10px; width:28px; height:21px;'><span style='font-size:14px; color:#000000;'><b>{valueY.value}</b></span>";
+    series.tooltipHTML = "<img href=\"pics/favicon-32x32.png\" style='vertical-align:bottom; margin-right: 10px; width:28px; height:21px;'><span style='font-size:14px; color:#000000;'><b>{valueY.value}</b></span>";
     series.tooltipText = "[#000]{valueY.value}[/]";
     series.tooltip.background.fill = am4core.color("#FFF");
     series.tooltip.getStrokeFromObject = true;
@@ -134,7 +134,7 @@ am4core.ready(function () {
     series2.name = "motorcycles";
     series2.dataFields.dateX = "year";
     series2.dataFields.valueY = "motorcycles";
-    series2.tooltipHTML = "<img src='https://www.amcharts.com/lib/3/images/motorcycle.png' style='vertical-align:bottom; margin-right: 10px; width:28px; height:21px;'><span style='font-size:14px; color:#000000;'><b>{valueY.value}</b></span>";
+    series2.tooltipHTML = "<img href=\"pics/favicon-32x32.png\" style='vertical-align:bottom; margin-right: 10px; width:28px; height:21px;'><span style='font-size:14px; color:#000000;'><b>{valueY.value}</b></span>";
     series2.tooltipText = "[#000]{valueY.value}[/]";
     series2.tooltip.background.fill = am4core.color("#FFF");
     series2.tooltip.getFillFromObject = false;
@@ -149,7 +149,7 @@ am4core.ready(function () {
     series3.name = "bicycles";
     series3.dataFields.dateX = "year";
     series3.dataFields.valueY = "bicycles";
-    series3.tooltipHTML = "<img src='https://www.amcharts.com/lib/3/images/bicycle.png' style='vertical-align:bottom; margin-right: 10px; width:28px; height:21px;'><span style='font-size:14px; color:#000000;'><b>{valueY.value}</b></span>";
+    series3.tooltipHTML = "<img href=\"pics/favicon-32x32.png\" style='vertical-align:bottom; margin-right: 10px; width:28px; height:21px;'><span style='font-size:14px; color:#000000;'><b>{valueY.value}</b></span>";
     series3.tooltipText = "[#000]{valueY.value}[/]";
     series3.tooltip.background.fill = am4core.color("#FFF");
     series3.tooltip.getFillFromObject = false;
@@ -168,30 +168,5 @@ am4core.ready(function () {
 // Add a legend
     chart.legend = new am4charts.Legend();
     chart.legend.position = "top";
-
-// axis ranges
-//     var range = dateAxis.axisRanges.create();
-//     range.date = new Date(2001, 0, 1);
-//     range.endDate = new Date(2003, 0, 1);
-//     range.axisFill.fill = chart.colors.getIndex(7);
-//     range.axisFill.fillOpacity = 0.2;
-//
-    // range.label.text = "Fines for speeding increased";
-    // range.label.inside = true;
-    // range.label.rotation = 90;
-    // range.label.horizontalCenter = "right";
-    // range.label.verticalCenter = "bottom";
-    //
-    // var range2 = dateAxis.axisRanges.create();
-    // range2.date = new Date(2007, 0, 1);
-    // range2.grid.stroke = chart.colors.getIndex(7);
-    // range2.grid.strokeOpacity = 0.6;
-    // range2.grid.strokeDasharray = "5,2";
-    //
-    // range2.label.text = "Motorcycle fee introduced";
-    // range2.label.inside = true;
-    // range2.label.rotation = 90;
-    // range2.label.horizontalCenter = "right";
-    // range2.label.verticalCenter = "bottom";
 
 });
