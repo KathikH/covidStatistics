@@ -4,7 +4,7 @@
     /*--border-color: #bbbbbb;*/
     --font-style: normal;
     --keyValues-font-size: 400%;
-    --chart-size: 99%;
+    --chart-size: 100%;
     --topRowHeight: 32vh;
     --bottomRowHeight: 44.5vh;
     /*--font-family: Courier, monospace;*/
@@ -22,10 +22,10 @@ body {
     /*background-image: url(../pics/grey-background.jpg);*/
     /*background-color: darkgrey;*/
     width: 100%;
-    margin-top: 4.5vh;
-    margin-left: 8.5vh;
-    margin-bottom: 3.5vh;
-    margin-right: 8.5vh;
+    margin-top: 2.2%;
+    margin-left: 4%;
+    margin-bottom: 2%;
+    margin-right: 6%;
 }
 
 .col {
@@ -60,7 +60,7 @@ body {
     font-family: var(--font-family);
     position: absolute;
     left: 50%;
-    top: 60%;
+    top: 50%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
