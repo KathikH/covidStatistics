@@ -21,8 +21,8 @@ am4core.ready(function () {
         property: "fill",
         target: polygonSeries.mapPolygons.template,
         // max: chart.colors.getIndex(5).brighten(-0.3)
-        min: am4core.color("#E9DCBE"), //#DE9E9B
-        max: am4core.color("#FF9671") //#FF1818
+        min: am4core.color("#fa9584"), //#DE9E9B
+        max: am4core.color("#c70039") //#FF1818
     });
 
 // Make map load polygon data (state shapes and names) from GeoJSON
@@ -51,8 +51,8 @@ am4core.ready(function () {
     heatLegend.series = polygonSeries;
     heatLegend.align = "right";
     heatLegend.valign = "bottom";
-    heatLegend.width = am4core.percent(20);
-    heatLegend.marginRight = am4core.percent(4);
+    heatLegend.width = am4core.percent(18);
+    heatLegend.marginRight = am4core.percent(2);
     heatLegend.minValue = 0;
     heatLegend.maxValue = 200;
 
@@ -78,5 +78,4 @@ am4core.ready(function () {
 // Create hover state and set alternative fill color
 //     var hs = polygonTemplate.states.create("hover");
     // hs.properties.fill = am4core.color("#66c041");
-
 });

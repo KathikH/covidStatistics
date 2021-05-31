@@ -20,8 +20,10 @@ am4core.ready(function () {
     series.heatRules.push({
         "target": series.labels.template,
         "property": "fill",
-        "min": am4core.color("#0000CC"),
-        "max": am4core.color("#CC00CC"),
+        "min": am4core.color("#551a8b"),
+        "max": am4core.color("#551a8b"),
+        // "min": am4core.color("#0000CC"),
+        // "max": am4core.color("#CC00CC"),
         "dataField": "value"
     });
 

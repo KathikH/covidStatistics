@@ -141,3 +141,42 @@ export const covidStates = async (): Promise<{
 
     return response;
 };
+
+export interface covidIncidenceResponse {
+    weekIncidence: number;
+    date: string;
+    delta: {
+        weekIncidence: number;
+        date: string;
+    };
+}
+
+interface covidIncidencesResponse {
+    data: { [key: string]: covidIncidenceResponse };
+    meta: covidMeta;
+}
+
+export const covidIncidences = async (): Promise<{
+    ok: boolean;
+    data?: covidIncidencesResponse;
+}> => {
+    let out: {
+        ok: boolean;
+        data?: covidIncidencesResponse;
+    } = {
+        ok: false,
+    };
+
+    out = await axios
+        .get("https://api.corona-zahlen.org/germany/history/incidence")
+        .then((r) => {
+            if (r.status === 200) return {ok: true, data: r.data};
+            else return {ok: false};
+        })
+        .catch((err) => {
+            console.log("Error calling API:", err);
+            return {ok: false};
+        });
+
+    return out;
+};

@@ -7,39 +7,23 @@ am4core.ready(function () {
 
 // Add data
     chart.data = [{
-        "country": "Lithuania",
-        "litres": 501.9
+        "name": "Unzufrieden",
+        "percentage": 58
     }, {
-        "country": "Czechia",
-        "litres": 301.9
-    }, {
-        "country": "Ireland",
-        "litres": 201.1
-    }, {
-        "country": "Germany",
-        "litres": 165.8
-    }, {
-        "country": "Australia",
-        "litres": 139.9
-    }, {
-        "country": "Austria",
-        "litres": 128.3
-    }, {
-        "country": "UK",
-        "litres": 99
-    }, {
-        "country": "Belgium",
-        "litres": 60
-    }, {
-        "country": "The Netherlands",
-        "litres": 50
+        "name": "Zufrieden",
+        "percentage": 42
     }];
 
 // Add and configure Series
     var pieSeries = chart.series.push(new am4charts.PieSeries());
-    pieSeries.dataFields.value = "litres";
-    pieSeries.dataFields.category = "country";
-    pieSeries.labels.template.disabled = true;
+    pieSeries.dataFields.value = "percentage";
+    pieSeries.dataFields.category = "name";
+    pieSeries.labels.template.text = "{name}: {percentage}";
+
+    pieSeries.colors.list = [
+        am4core.color("#8a9a5b"),
+        am4core.color("#4f6137")
+    ];
 
     chart.radius = am4core.percent(95);
 

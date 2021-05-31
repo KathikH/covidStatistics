@@ -11,7 +11,7 @@
     "mongoose": "^5.12.10",
     "dotenv": "^8.2.0",
     "ts-node": "^9.1.1",
-    "upper-case": "^2.0.2"
+    "upper-case": "^2.0.2",
   },
   "devDependencies": {
     "@types/node": "^14.14.35",

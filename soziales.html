@@ -1,13 +1,12 @@
 <!DOCTYPE html>
-<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Corona-Dashboard</title>
+    <title>Soziales</title>
 
     <link rel="stylesheet" href="css/bootstrap.minNeu.css">
     <link rel="stylesheet" href="css/index.css"/>
-    <link rel="stylesheet" href="css/overview.css"/>
+    <link rel="stylesheet" href="css/soziales.css"/>
     <link rel="icon" type="image/png" sizes="32x32" href="pics/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="pics/favicon-16x16.png">
 
@@ -37,10 +36,10 @@
     <script type="text/javascript" src="js/amCharts/donutChart.js"></script>
     <script type="text/javascript" src="js/amCharts/stackedColumnChart.js"></script>
     <script type="text/javascript" src="js/amCharts/trendlineChart.js"></script>
-
-    <script type="text/javascript" src="js/tooltip.js"></script>
+    <script type="text/javascript" src="js/amCharts/pictorialStackedChart.js"></script>
+    <script type="text/javascript" src="js/amCharts/treeMapChart.js"></script>
+    <script type="text/javascript" src="js/amCharts/negativeBarChart.js"></script>
 </head>
-
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand">Dashboard zur Covid-19-Pandemie</a>
@@ -50,11 +49,11 @@
     </button>
     <div class="navbar-collapse collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="index.html">Grundlegende Aspekte<span class="sr-only">(current)</span></a>
-            </li>
             <li class="nav-item">
-                <a class="nav-link" href="soziales.html">Soziales</a>
+                <a class="nav-link" href="index.html">Grundlegende Aspekte</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="soziales.html">Soziales<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="moodboard.html">Moodboard</a>
@@ -66,72 +65,55 @@
     </div>
 </nav>
 <div class="row">
+    <div class="col-md-4 col-sm-6 col-xs-12">
+        <div class="card text-center" style="height: 41%">
+            <div class="card-header">Kriminalität in Nordrhein-Westfalen 2020</div>
+            <div class="card-body">
+                <div id="negativeBarChart"></div>
+            </div>
+            <div class="card-footer">Quelle: Polizeiliche Kriminalstatistik der Landesregierung Nordrhein-Westfalen 2020</div>
+        </div>
+        <div style="height: 4%;"></div>
+        <div class="card text-center" style="height: 51%">
+            <div class="card-header">Top Amazon-Suchbegriffe März 2020</div>
+            <div class="card-body">
+                <div id="word_cloud"></div>
+            </div>
+            <div class="card-footer">Quelle: Amazon Brand Analytics</div>
+        </div>
+    </div>
+    <div class="col-md-5 col-sm-7 col-xs-13">
+        <div class="card text-center" style="height: 96%">
+            <div class="card-header">Pictorial</div>
+            <div class="card-body">
+                <div id="pictorialChart"></div>
+            </div>
+            <div class="card-footer">Quelle:</div>
+        </div>
+    </div>
     <div class="col-md-2 col-sm-4 col-xs-10">
         <div class="card text-center keyValue">
-            <div class="card-header">Geimpfte Personen</div>
+            <div class="card-header">Zahl aller in NRW registrierten Straftaten 2020</div>
             <div class="card-body">
-                <div class="card-text">14.197.101</div>
+                <div class="card-text" data-toggle="tooltip" data-placement="top" title="Um 12.166 Fälle auf insgesamt 1.215.763 Fälle gesunken">-1%</div>
             </div>
-            <div class="card-footer">Quelle:</div>
-        </div>
-        <div style="height: 4%;"></div>
-        <div class="card text-center keyValue">
-            <div class="card-header">SARS-CoV-2 Mutationen</div>
-            <div class="card-body">
-                <!--                <div class="card-text">4</div>-->
-                <div class="card-text">4</div>
-            </div>
-            <div class="card-footer">Quelle:</div>
-        </div>
-        <div style="height: 4%;"></div>
-        <div class="card text-center keyValue">
-            <div class="card-header">Infizierte kum.</div>
-            <div class="card-body">
-                <div class="card-text">802.504</div>
-            </div>
-            <div class="card-footer">Quelle:</div>
+            <div class="card-footer">Quelle: Polizeiliche Kriminalstatistik</div>
         </div>
         <div style="height: 4%;"></div>
         <div class="card text-center keyValue">
             <div class="card-header"></div>
             <div class="card-body">
-                <div class="card-text">
-                </div>
-            </div>
-            <div class="card-footer">Quelle:</div>
-        </div>
-    </div>
-    <div class="col-md-4 col-sm-6 col-xs-12">
-        <div class="card" style="height: 25%">
-            <div class="card-body"
-                 style="font-family: Courier New, monospace; font-size: 1.5vw;">"Die schwierigste Zeit in unserem Leben
-                ist die beste Gelegenheit, innere Stärke zu entwickeln." - Dalai Lama
-            </div>
-        </div>
-        <div style="height: 4%;"></div>
-        <div class="card text-center" style="height: 67%">
-            <div class="card-header">Geo Map</div>
-            <div class="card-body">
-                <div id="germanyHeatmap"></div>
-            </div>
-            <div class="card-footer">Quelle:</div>
-        </div>
-    </div>
-    <div class="col-md-5 col-sm-7 col-xs-13">
-        <div class="card text-center" style="height: 41%">
-            <div class="card-header">Ansteckung durch...</div>
-            <div class="card-body">
-                <div id="donutChart"></div>
+                <div class="card-text"></div>
             </div>
             <div class="card-footer">Quelle:</div>
         </div>
         <div style="height: 4%;"></div>
-        <div class="card text-center" style="height: 51%">
-            <div class="card-header">Inzidenzzahlenentwicklung</div>
+        <div class="card text-center keyValue">
+            <div class="card-header">Geburtenrate 2020</div>
             <div class="card-body">
-                <div id="trendlineChart"></div>
+                <div class="card-text">-0,6%</div>
             </div>
-            <div class="card-footer">Quelle:</div>
+            <div class="card-footer">Quelle: Destatis Pressemitteilung Nr. 200</div>
         </div>
     </div>
 </div>
