@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard 2</title>
+
+    <link rel="stylesheet" href="css/bootstrap.minNeu.css">
+    <link rel="stylesheet" href="css/index.css"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="pics/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="pics/favicon-16x16.png">
+
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/plugins/wordCloud.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/themes/material.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/lang/de_DE.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/geodata/worldLow.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/geodata/germanyLow.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/geodata/usaLow.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/fonts/notosans-sc.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/maps.js"></script>
+
+    <script type="text/javascript" src="js/googleCharts/geomap.js"></script>
+    <script type="text/javascript" src="js/amCharts/areaChart.js"></script>
+    <script type="text/javascript" src="js/amCharts/wordCloud.js"></script>
+    <script type="text/javascript" src="js/googleCharts/trendline.js"></script>
+    <script type="text/javascript" src="js/amCharts/gauge.js"></script>
+    <script type="text/javascript" src="js/amCharts/germanyHeatmap.js"></script>
+    <script type="text/javascript" src="js/amCharts/pieChart.js"></script>
+    <script type="text/javascript" src="js/amCharts/donutChart.js"></script>
+    <script type="text/javascript" src="js/amCharts/stackedColumnChart.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand">Navigation</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="zweiteSeite.html">Dashboard 2 <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="row">
+    <div class="col-md-2 col-sm-4 col-xs-10">
+        <div class="topCards">
+            <div class="card text-center firstlineKeyValues">
+                <div class="card-header">Punkte für Gryffindor</div>
+                <div class="card-body">
+                    <div class="card-text">10</div>
+                </div>
+            </div>
+            <div style="height: 8%;"></div>
+            <div class="card text-center firstlineKeyValues">
+                <div class="card-header">Zufrieden mit der Politik</div>
+                <div class="card-body">
+                    <div class="card-text">62%</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-5 col-sm-7 col-xs-13">
+        <div class="card text-center">
+            <div class="card-header">Mood-O-Meter</div>
+            <div class="card-body firstlineChart">
+                <div id="gauge" class="firstlineChart"></div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 col-sm-6 col-xs-12">
+        <div class="card text-center">
+            <div class="card-header">Top Amazon-Suchbegriffe März 2020</div>
+            <div class="card-body firstlineChart">
+                <div id="word_cloud"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row" style="height: 3vh"></div>
+<div class="row">
+    <div class="col-md-2 col-sm-4 col-xs-10">
+        <div class="bottomCards">
+            <div class="card text-center secondlineKeyValues">
+                <div class="card-header">Kriminalitätsrate</div>
+                <div class="card-body">
+                    <div class="card-text">-2,3%</div>
+                </div>
+            </div>
+            <div style="height: 8%;"></div>
+            <div class="card text-center secondlineKeyValues">
+                <div class="card-header">Geburtenrate</div>
+                <div class="card-body">
+                    <div class="card-text">-0,6%</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 col-sm-6 col-xs-12">
+        <div class="card text-center">
+            <div class="card-header"></div>
+            <div class="card-body secondlineChart">
+
+            </div>
+        </div>
+    </div>
+    <div class="col-md-5 col-sm-7 col-xs-13">
+        <div class="card text-center">
+            <div class="card-header">Häufige Themen bei Gesprächen mit der Telefonseelsorge in NRW</div>
+            <div class="card-body secondlineChart">
+                <div id="stackedColumnChart"></div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

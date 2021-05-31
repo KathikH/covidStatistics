@@ -1,31 +1,32 @@
 :root {
     --font-color: black;
     --border-color: grey;
-    /*--border-color: #bbbbbb;*/
     --font-style: normal;
     --keyValues-font-size: 400%;
     --chart-size: 100%;
     --topRowHeight: 32vh;
     --bottomRowHeight: 44.5vh;
-    /*--font-family: Courier, monospace;*/
-    /*--font-family: Gill Sans;*/
     --font-family: Bahnschrift Light;
-    /*--font-family: Malgun Gothic;*/
-    /*--font-family: SimSun;*/
-    /*--font-family: Verdana;*/
-    /*--font-family: Westminster;*/
+    --card-text-font-size: 200%;
 }
 
 body {
     overflow-x: hidden;
     position: relative;
-    /*background-image: url(../pics/grey-background.jpg);*/
-    /*background-color: darkgrey;*/
+    background-color: #f8f9fa;
     width: 100%;
-    margin-top: 2.2%;
     margin-left: 4%;
-    margin-bottom: 2%;
     margin-right: 6%;
+    margin-top: 0.2%;
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+.row {
+    height: 92vh;
+    margin-top: 0.2%;
 }
 
 .col {
@@ -33,73 +34,38 @@ body {
     border-right: var(--border-color);
 }
 
-.row {
-    border-bottom: var(--border-color);
-}
-
 .card {
     border-color: var(--border-color);
-    /*background-color: #1b1e21;*/
-    /*background-color: #D0F0C0;*/
-    /*background-color: lightyellow;*/
-    background-color: lightgrey;
+    /*background-color: lightgrey;*/
 }
 
 .card-header {
     color: dimgrey;
     font-weight: bold;
     border-color: var(--border-color);
-    /*font-size: 25%;*/
-    font-size: 1.8vh;
+    font-size: 110%;
     font-family: var(--font-family);
 }
 
-.card-text {
-    /*color: #ff8300;*/ /*orange*/
-    /*color: #e1ad01;*/ /*yellow*/
+.card-footer {
     font-family: var(--font-family);
-    position: absolute;
+    font-size: 80%;
+    background-color: transparent;
+}
+
+.card-text {
+    font-family: var(--font-family);
+    position: relative;
     left: 50%;
     top: 50%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
 
-.firstlineChart {
-    width: 100%;
-    height: var(--topRowHeight);
-}
-
-.secondlineChart {
-    width: 100%;
-    height: var(--bottomRowHeight);
-}
-
-.topCards {
-    width: 100%;
-    height: var(--topRowHeight);
-}
-
-.bottomCards {
-    width: 100%;
-    height: var(--bottomRowHeight);
-}
-
-.firstlineKeyValues {
-    width: 100%;
-    height: 54.5%;
-    font-size: var(--keyValues-font-size);
-}
-
-.secondlineKeyValues {
-    width: 100%;
-    height: 52.1%;
-    font-size: var(--keyValues-font-size);
-}
-
-#word_cloud {
-    height: var(--chart-size);
+.keyValue {
+    font-family: var(--font-family);
     width: var(--chart-size);
+    /*height: 21%;*/
 }
 
 #germanyHeatmap {
@@ -120,44 +86,55 @@ body {
     width: var(--chart-size);
 }
 
-#de_map svg path[fill^='none'] {
-    stroke-width: 0px; /*Umrandungen der datenlosen Länder*/
+#word_cloud {
+    width: var(--chart-size);
+    height: var(--chart-size);
+}
+
+#gauge {
+    font-family: var(--font-family);
+    width: var(--chart-size);
+    height: var(--chart-size);
+}
+
+#stackedColumnChart {
+    font-family: var(--font-family);
+    width: var(--chart-size);
+    height: var(--chart-size);
+}
+
+#trendlineChart {
+    font-family: var(--font-family);
+    width: var(--chart-size);
+    height: var(--chart-size);
+}
+
+#barChart {
+    font-family: var(--font-family);
+    width: var(--chart-size);
+    height: var(--chart-size);
+}
+
+#pictorialChart {
+    font-family: var(--font-family);
+    width: var(--chart-size);
+    height: var(--chart-size);
+}
+
+#treeMapChart {
+    font-family: var(--font-family);
+    width: var(--chart-size);
+    height: var(--chart-size);
 }
 
 #pieChart {
-    font-size: 11px;
-    border: 1px solid #eee;
-    float: left;
+    font-family: var(--font-family);
+    width: var(--chart-size);
+    height: var(--chart-size);
 }
 
-#pieChartLegend {
-    border: 1px solid #eee;
-    margin-left: 10px;
-    float: left;
-}
-
-#pieChartLegend .legend-item {
-    margin: 10px;
-    font-size: 15px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-#pieChartLegend .legend-item .legend-value {
-    font-size: 12px;
-    font-weight: normal;
-    margin-left: 22px;
-}
-
-#pieChartLegend .legend-item .legend-marker {
-    display: inline-block;
-    width: 12px;
-    height: 12px;
-    border: 1px solid #ccc;
-    margin-right: 10px;
-}
-
-#pieChartLegend .legend-item.disabled .legend-marker {
-    opacity: 0.5;
-    background: #ddd;
+#negativeBarChart {
+    font-family: var(--font-family);
+    width: var(--chart-size);
+    height: var(--chart-size);
 }

@@ -1,13 +1,12 @@
 <!DOCTYPE html>
-<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Corona-Dashboard</title>
+    <title>Moodboard</title>
 
     <link rel="stylesheet" href="css/bootstrap.minNeu.css">
     <link rel="stylesheet" href="css/index.css"/>
-    <link rel="stylesheet" href="css/overview.css"/>
+    <link rel="stylesheet" href="css/moodboard.css"/>
     <link rel="icon" type="image/png" sizes="32x32" href="pics/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="pics/favicon-16x16.png">
 
@@ -37,10 +36,7 @@
     <script type="text/javascript" src="js/amCharts/donutChart.js"></script>
     <script type="text/javascript" src="js/amCharts/stackedColumnChart.js"></script>
     <script type="text/javascript" src="js/amCharts/trendlineChart.js"></script>
-
-    <script type="text/javascript" src="js/tooltip.js"></script>
 </head>
-
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand">Dashboard zur Covid-19-Pandemie</a>
@@ -50,14 +46,14 @@
     </button>
     <div class="navbar-collapse collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="index.html">Grundlegende Aspekte<span class="sr-only">(current)</span></a>
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Grundlegende Aspekte</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="soziales.html">Soziales</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="moodboard.html">Moodboard</a>
+            <li class="nav-item active">
+                <a class="nav-link" href="moodboard.html">Moodboard<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="arbeitsmarkt.html">Arbeitsmarkt</a>
@@ -66,70 +62,53 @@
     </div>
 </nav>
 <div class="row">
+    <div class="col-md-4 col-sm-6 col-xs-12">
+        <div class="card text-center" style="height: 43%">
+            <div class="card-header">Mood-O-Meter</div>
+            <div class="card-body">
+                <div id="gauge"></div>
+            </div>
+            <!--            <div class="card-footer">Quelle:</div>-->
+        </div>
+        <div style="height: 4%;"></div>
+        <div class="card text-center" style="height: 49%">
+            <div class="card-header">Zufriedenheit der deutschen Bevölkerung mit der aktuellen Corona-Politik</div>
+            <div class="card-body">
+                <div id="pieChart"></div>
+            </div>
+            <div class="card-footer">Quelle: Umfrage des Meinungsforschungsinstituts Civey</div>
+        </div>
+    </div>
+    <div class="col-md-5 col-sm-7 col-xs-13">
+        <div class="card text-center" style="height: 96%">
+            <div class="card-header">Häufige Themen bei Gesprächen mit der Telefonseelsorge in NRW</div>
+            <div class="card-body">
+                <div id="stackedColumnChart"></div>
+            </div>
+            <div class="card-footer">Quelle: TelefonSeelsorge Bochum</div>
+        </div>
+    </div>
     <div class="col-md-2 col-sm-4 col-xs-10">
         <div class="card text-center keyValue">
-            <div class="card-header">Geimpfte Personen</div>
+            <div class="card-header">Anrufe bei Corona-Hotlines</div>
             <div class="card-body">
-                <div class="card-text">14.197.101</div>
+                <div class="card-text">24.230</div>
             </div>
-            <div class="card-footer">Quelle:</div>
+            <div class="card-footer">Quelle: TelefonSeelsorge Bochum</div>
         </div>
         <div style="height: 4%;"></div>
         <div class="card text-center keyValue">
-            <div class="card-header">SARS-CoV-2 Mutationen</div>
+            <div class="card-header">Ausfalltage wegen psychischer Erkrankungen</div>
             <div class="card-body">
-                <!--                <div class="card-text">4</div>-->
-                <div class="card-text">4</div>
+                <div class="card-text" data-toggle="tooltip" data-placement="top" title="Fehltage je 100 Versicherte">265</div>
             </div>
-            <div class="card-footer">Quelle:</div>
-        </div>
-        <div style="height: 4%;"></div>
-        <div class="card text-center keyValue">
-            <div class="card-header">Infizierte kum.</div>
-            <div class="card-body">
-                <div class="card-text">802.504</div>
-            </div>
-            <div class="card-footer">Quelle:</div>
+            <div class="card-footer">Quelle: Psychoreport 2020 der DAK-Gesundheit</div>
         </div>
         <div style="height: 4%;"></div>
         <div class="card text-center keyValue">
             <div class="card-header"></div>
             <div class="card-body">
-                <div class="card-text">
-                </div>
-            </div>
-            <div class="card-footer">Quelle:</div>
-        </div>
-    </div>
-    <div class="col-md-4 col-sm-6 col-xs-12">
-        <div class="card" style="height: 25%">
-            <div class="card-body"
-                 style="font-family: Courier New, monospace; font-size: 1.5vw;">"Die schwierigste Zeit in unserem Leben
-                ist die beste Gelegenheit, innere Stärke zu entwickeln." - Dalai Lama
-            </div>
-        </div>
-        <div style="height: 4%;"></div>
-        <div class="card text-center" style="height: 67%">
-            <div class="card-header">Geo Map</div>
-            <div class="card-body">
-                <div id="germanyHeatmap"></div>
-            </div>
-            <div class="card-footer">Quelle:</div>
-        </div>
-    </div>
-    <div class="col-md-5 col-sm-7 col-xs-13">
-        <div class="card text-center" style="height: 41%">
-            <div class="card-header">Ansteckung durch...</div>
-            <div class="card-body">
-                <div id="donutChart"></div>
-            </div>
-            <div class="card-footer">Quelle:</div>
-        </div>
-        <div style="height: 4%;"></div>
-        <div class="card text-center" style="height: 51%">
-            <div class="card-header">Inzidenzzahlenentwicklung</div>
-            <div class="card-body">
-                <div id="trendlineChart"></div>
+                <div class="card-text"></div>
             </div>
             <div class="card-footer">Quelle:</div>
         </div>
