@@ -46,16 +46,26 @@ am4core.ready(function () {
     var columnTemplate = series.columns.template;
     columnTemplate.tooltipText = "{categoryX}: [bold]{valueY}[/]";
     columnTemplate.fillOpacity = .8;
-    columnTemplate.strokeOpacity = 0;
-    columnTemplate.fill = am4core.color("#6794dc");
+    columnTemplate.strokeOpacity = 1;
+    columnTemplate.fill = am4core.color("#F9F871");
+    columnTemplate.stroke = am4core.color("#F9F871");
     // columnTemplate.fill = am4core.color("#5a5");
 
     columnTemplate.adapter.add("fill", function (fill, target) {
         if (target.dataItem && (target.dataItem.valueY < 0)) {
-            return am4core.color("#D65DB1");
+            return am4core.color("#be88e7");
             // return am4core.color("#a55");
         } else {
             return fill;
+        }
+    });
+
+    columnTemplate.adapter.add("stroke", function (stroke, target) {
+        if (target.dataItem && (target.dataItem.valueY < 0)) {
+            return am4core.color("#be88e7");
+            // return am4core.color("#a55");
+        } else {
+            return stroke;
         }
     });
 

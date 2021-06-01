@@ -38,11 +38,23 @@ am4core.ready(function() {
     series.dataFields.category = "name";
     series.alignLabels = true;
 
+    series.colors.list = [
+        am4core.color("#D65DB1"),
+        am4core.color("#b940cf"),
+        am4core.color("#8067dc"),
+        am4core.color("#8800ff"),
+        am4core.color("#6600a1"),
+        am4core.color("#83639d"),
+        am4core.color("#be88e7")
+
+    ];
+
     series.maskSprite.path = iconPath;
     series.ticks.template.locationX = 1;
     series.ticks.template.locationY = 0.5;
 
     series.labelsContainer.width = 200;
+    series.tooltip.pointerOrientation = "up";
 
     chart.legend = new am4charts.Legend();
     chart.legend.position = "left";
