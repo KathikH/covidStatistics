@@ -90,7 +90,7 @@ am4core.ready(function () {
     series1.columns.template.fill = am4core.color("#25523b");
     series1.columns.template.stroke = am4core.color("#25523b");
     series1.columns.template.tooltipText =
-        "{category}: {valueY.totalPercent.formatNumber('#.00')}%";
+        "{category}: {valueY.totalPercent.formatNumber('#.00')}% ({valueY})";
     series1.name = "Gespräche über Corona";
     series1.dataFields.categoryX = "category";
     series1.dataFields.valueY = "value1";
@@ -110,7 +110,7 @@ am4core.ready(function () {
     series2.columns.template.fill = am4core.color("#358856");
     series2.columns.template.stroke = am4core.color("#358856");
     series2.columns.template.tooltipText =
-        "{category}: {valueY.totalPercent.formatNumber('#.00')}%";
+        "{category}: {valueY.totalPercent.formatNumber('#.00')}% ({valueY})";
     series2.name = "Gespräche über Suizidalität";
     series2.dataFields.categoryX = "category";
     series2.dataFields.valueY = "value2";
@@ -130,7 +130,7 @@ am4core.ready(function () {
     series3.columns.template.fill = am4core.color("#5aab61");
     series3.columns.template.stroke = am4core.color("#5aab61");
     series3.columns.template.tooltipText =
-        "{category}: {valueY.totalPercent.formatNumber('#.00')}%";
+        "{category}: {valueY.totalPercent.formatNumber('#.00')}% ({valueY})";
     series3.name = "Gespräche über depressive Stimmung";
     series3.dataFields.categoryX = "category";
     series3.dataFields.valueY = "value3";
@@ -150,7 +150,7 @@ am4core.ready(function () {
     series4.columns.template.fill = am4core.color("#62bd69");
     series4.columns.template.stroke = am4core.color("#62bd69");
     series4.columns.template.tooltipText =
-        "{category}: {valueY.totalPercent.formatNumber('#.00')}%";
+        "{category}: {valueY.totalPercent.formatNumber('#.00')}% ({valueY})";
     series4.name = "Gespräche über Ängste";
     series4.dataFields.categoryX = "category";
     series4.dataFields.valueY = "value4";
@@ -170,7 +170,7 @@ am4core.ready(function () {
     series5.columns.template.fill = am4core.color("#30694b");
     series5.columns.template.stroke = am4core.color("#30694b");
     series5.columns.template.tooltipText =
-        "{category}: {valueY.totalPercent.formatNumber('#.00')}%";
+        "{category}: {valueY.totalPercent.formatNumber('#.00')}% ({valueY})";
     series5.name = "Gespräche über Einsamkeit / Isolation";
     series5.dataFields.categoryX = "category";
     series5.dataFields.valueY = "value5";
@@ -226,7 +226,7 @@ am4core.ready(function () {
     series8.columns.template.fill = am4core.color("#0c3823");
     series8.columns.template.stroke = am4core.color("#0c3823");
     series8.columns.template.tooltipText =
-        "{category}: {valueY.totalPercent.formatNumber('#.00')}%";
+        "{category}: {valueY.totalPercent.formatNumber('#.00')}% ({valueY})";
     series8.name = "Gespräche über Gewalt";
     series8.dataFields.categoryX = "category";
     series8.dataFields.valueY = "value8";

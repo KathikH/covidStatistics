@@ -1,5 +1,3 @@
-// import {covidIncidences} from "/ts/api.ts";
-
 am4core.ready(function () {
 
     am4core.useTheme(am4themes_animated);
@@ -13,7 +11,7 @@ am4core.ready(function () {
         "value": 10
     }, {
         "date": "2020-01-02",
-        "color": "#CC0000",
+        "color": "#ff5733",
         "value": 10
     }, {
         "date": "2020-01-03",
@@ -41,7 +39,7 @@ am4core.ready(function () {
         "value": 15
     }, {
         "date": "2020-01-11",
-        "color": "#CC0000",
+        "color": "#ff5733",
         "value": 19
     }, {
         "date": "2020-01-12",
@@ -81,6 +79,10 @@ am4core.ready(function () {
         "value": 8
     }];
 
+    // chart.dataSource.url = "/ts/api.ts";
+    // chart.dataSource.parser = new am4core.JSONParser();
+    // chart.dataSource.parser.options.emptyAs = 0;
+
 // Create axes
     var dateAxis = chart.xAxes.push(new am4charts.DateAxis());
     dateAxis.dataFields.category = "Date";
@@ -96,9 +98,12 @@ am4core.ready(function () {
     series.dataFields.dateX = "date";
     series.strokeWidth = 2
     series.strokeOpacity = 0.3;
+    series.fill = am4core.color("#581845");
+    series.stroke = am4core.color("#581845");
 
     var bullet = series.bullets.push(new am4charts.CircleBullet());
     bullet.strokeWidth = 2;
+    bullet.fill = am4core.color("#581845");
     bullet.stroke = am4core.color("#fff")
 
     function createTrendLine(data) {
@@ -106,7 +111,7 @@ am4core.ready(function () {
         trend.dataFields.valueY = "value";
         trend.dataFields.dateX = "date";
         trend.strokeWidth = 2
-        trend.stroke = am4core.color("#c00");
+        trend.stroke = am4core.color("#ff5733");
         trend.data = data;
 
         var bullet = trend.bullets.push(new am4charts.CircleBullet());
