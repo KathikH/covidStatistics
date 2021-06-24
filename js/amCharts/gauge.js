@@ -11,7 +11,7 @@ am4core.ready(function () {
         score: 52.7,
         gradingData: [
             {
-                title: "Sehr unglücklich",
+                title: "Sehr stark erhöhtes Risiko für psychische Erkrankungen",
                 name: "Lockdown",
                 color: "#ff6961",
                 // color: "#ee1f25",
@@ -19,7 +19,7 @@ am4core.ready(function () {
                 highScore: 0
             },
             {
-                title: "Eher unglücklich",
+                title: "Erhöhtes Risiko für psychische Erkrankungen",
                 name: "Pandemie",
                 color: "#fdff6e",
                 // color: "#ffcc00",
@@ -27,7 +27,7 @@ am4core.ready(function () {
                 highScore: 50
             },
             {
-                title: "Glücklich",
+                title: "Normales Risiko für psychische Erkrankungen",
                 name: "Keine Pandemie",
                 color: "#77dd77",
                 // color: "#0f9747",
@@ -92,6 +92,7 @@ am4core.ready(function () {
     axis2.renderer.labels.template.fill = am4core.color("#000");
     axis2.renderer.labels.template.fontWeight = "bold";
     axis2.renderer.labels.template.fillOpacity = 0.6;
+    axis2.renderer.labels.template.fontSize = "0.4em";
 
     /**
      Ranges

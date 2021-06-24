@@ -19,6 +19,7 @@ am4core.ready(function () {
     pieSeries.dataFields.value = "percentage";
     pieSeries.dataFields.category = "name";
     pieSeries.labels.template.text = "{name}: {percentage}";
+    pieSeries.tooltip.disabled = true;
 
     pieSeries.colors.list = [
         am4core.color("#8a9a5b"),

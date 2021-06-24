@@ -90,7 +90,7 @@ am4core.ready(function () {
     series1.columns.template.fill = am4core.color("#25523b");
     series1.columns.template.stroke = am4core.color("#25523b");
     series1.columns.template.tooltipText =
-        "{category}: {valueY.totalPercent.formatNumber('#.00')}% ({valueY})";
+        "{category}: {valueY} ({valueY.totalPercent.formatNumber('#.00')}%)";
     series1.name = "Gespräche über Corona";
     series1.dataFields.categoryX = "category";
     series1.dataFields.valueY = "value1";
@@ -101,7 +101,7 @@ am4core.ready(function () {
 
     var bullet1 = series1.bullets.push(new am4charts.LabelBullet());
     bullet1.interactionsEnabled = false;
-    bullet1.label.text = "{valueY.totalPercent.formatNumber('#.00')}%";
+    bullet1.label.text = "{valueY}";
     bullet1.label.fill = am4core.color("#ffffff");
     bullet1.locationY = 0.5;
 
@@ -110,7 +110,7 @@ am4core.ready(function () {
     series2.columns.template.fill = am4core.color("#358856");
     series2.columns.template.stroke = am4core.color("#358856");
     series2.columns.template.tooltipText =
-        "{category}: {valueY.totalPercent.formatNumber('#.00')}% ({valueY})";
+        "{category}: {valueY} ({valueY.totalPercent.formatNumber('#.00')}%)";
     series2.name = "Gespräche über Suizidalität";
     series2.dataFields.categoryX = "category";
     series2.dataFields.valueY = "value2";
@@ -121,7 +121,7 @@ am4core.ready(function () {
 
     var bullet2 = series2.bullets.push(new am4charts.LabelBullet());
     bullet2.interactionsEnabled = false;
-    bullet2.label.text = "{valueY.totalPercent.formatNumber('#.00')}%";
+    bullet2.label.text = "{valueY}";
     bullet2.locationY = 0.5;
     bullet2.label.fill = am4core.color("#ffffff");
 
@@ -130,7 +130,7 @@ am4core.ready(function () {
     series3.columns.template.fill = am4core.color("#5aab61");
     series3.columns.template.stroke = am4core.color("#5aab61");
     series3.columns.template.tooltipText =
-        "{category}: {valueY.totalPercent.formatNumber('#.00')}% ({valueY})";
+        "{category}: {valueY} ({valueY.totalPercent.formatNumber('#.00')}%)";
     series3.name = "Gespräche über depressive Stimmung";
     series3.dataFields.categoryX = "category";
     series3.dataFields.valueY = "value3";
@@ -141,7 +141,7 @@ am4core.ready(function () {
 
     var bullet3 = series3.bullets.push(new am4charts.LabelBullet());
     bullet3.interactionsEnabled = false;
-    bullet3.label.text = "{valueY.totalPercent.formatNumber('#.00')}%";
+    bullet3.label.text = "{valueY}";
     bullet3.locationY = 0.5;
     bullet3.label.fill = am4core.color("#ffffff");
 
@@ -150,7 +150,7 @@ am4core.ready(function () {
     series4.columns.template.fill = am4core.color("#62bd69");
     series4.columns.template.stroke = am4core.color("#62bd69");
     series4.columns.template.tooltipText =
-        "{category}: {valueY.totalPercent.formatNumber('#.00')}% ({valueY})";
+        "{category}: {valueY} ({valueY.totalPercent.formatNumber('#.00')}%)";
     series4.name = "Gespräche über Ängste";
     series4.dataFields.categoryX = "category";
     series4.dataFields.valueY = "value4";
@@ -161,7 +161,7 @@ am4core.ready(function () {
 
     var bullet4 = series4.bullets.push(new am4charts.LabelBullet());
     bullet4.interactionsEnabled = false;
-    bullet4.label.text = "{valueY.totalPercent.formatNumber('#.00')}%";
+    bullet4.label.text = "{valueY}";
     bullet4.locationY = 0.5;
     bullet4.label.fill = am4core.color("#ffffff");
 
@@ -170,7 +170,7 @@ am4core.ready(function () {
     series5.columns.template.fill = am4core.color("#30694b");
     series5.columns.template.stroke = am4core.color("#30694b");
     series5.columns.template.tooltipText =
-        "{category}: {valueY.totalPercent.formatNumber('#.00')}% ({valueY})";
+        "{category}: {valueY} ({valueY.totalPercent.formatNumber('#.00')}%)";
     series5.name = "Gespräche über Einsamkeit / Isolation";
     series5.dataFields.categoryX = "category";
     series5.dataFields.valueY = "value5";
@@ -181,7 +181,7 @@ am4core.ready(function () {
 
     var bullet5 = series5.bullets.push(new am4charts.LabelBullet());
     bullet5.interactionsEnabled = false;
-    bullet5.label.text = "{valueY.totalPercent.formatNumber('#.00')}%";
+    bullet5.label.text = "{valueY}";
     bullet5.locationY = 0.5;
     bullet5.label.fill = am4core.color("#ffffff");
 
@@ -226,7 +226,7 @@ am4core.ready(function () {
     series8.columns.template.fill = am4core.color("#0c3823");
     series8.columns.template.stroke = am4core.color("#0c3823");
     series8.columns.template.tooltipText =
-        "{category}: {valueY.totalPercent.formatNumber('#.00')}% ({valueY})";
+        "{category}: {valueY} ({valueY.totalPercent.formatNumber('#.00')}%)";
     series8.name = "Gespräche über Gewalt";
     series8.dataFields.categoryX = "category";
     series8.dataFields.valueY = "value8";
@@ -237,7 +237,7 @@ am4core.ready(function () {
 
     var bullet8 = series8.bullets.push(new am4charts.LabelBullet());
     bullet8.interactionsEnabled = false;
-    bullet8.label.text = "{valueY.totalPercent.formatNumber('#.00')}%";
+    bullet8.label.text = "{valueY}";
     bullet8.locationY = 0.5;
     bullet8.label.fill = am4core.color("#ffffff");
 

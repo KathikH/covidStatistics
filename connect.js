@@ -21,7 +21,7 @@ db.once("open", async function () {
 
     // Alte Objekte wegschmeißen...
     const deleteQuery = listingsAndReviewsCollection.deleteMany( { description: "Martins Immobilien #richlife"} );
-    console.dir((await deleteQuery).deletedCount + " alte Objekte gelöscht, Collection wieder sauber :-)");
+    console.dir((await deleteQuery).deletedCount + " alte Objekte gelöscht.");
 
 
     const meinAirBnBDocument = {

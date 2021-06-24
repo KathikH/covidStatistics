@@ -1,7 +1,7 @@
 import { config } from "dotenv";
 config();
 
-import { covidDistricts, covidGermany, covidStates } from "../api";
+import { covidDistricts, covidGermany, covidStates } from "./api";
 import * as fs from "fs";
 import * as path from "path";
 
