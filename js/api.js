@@ -2,6 +2,7 @@ import axios from "axios";
 import {GermanyCasesHistoryResponse} from "../ts/src/responses/germany";
 import express from "express";
 import path from "path";
+
 const cache = require("express-redis-cache")({
     expire: 1800,
     host: process.env.REDIS_URL,

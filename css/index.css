@@ -2,12 +2,12 @@
     --font-color: black;
     --border-color: grey;
     --font-style: normal;
-    --keyValues-font-size: 400%;
+    --keyValues-font-size: 4vw;
     --chart-size: 100%;
     --topRowHeight: 32vh;
     --bottomRowHeight: 44.5vh;
     --font-family: Bahnschrift Light;
-    --card-text-font-size: 200%;
+    --card-text-font-size: 2vw;
 }
 
 body {
@@ -43,13 +43,13 @@ body {
     color: dimgrey;
     font-weight: bold;
     border-color: var(--border-color);
-    font-size: 110%;
+    font-size: 1.2vw;
     font-family: var(--font-family);
 }
 
 .card-footer {
     font-family: var(--font-family);
-    font-size: 80%;
+    font-size: 0.8vw;
     background-color: transparent;
 }
 
@@ -134,6 +134,7 @@ body {
     font-family: var(--font-family);
     width: var(--chart-size);
     height: var(--chart-size);
+    font-size: 0.9vw;
 }
 
 #negativeBarChart {
