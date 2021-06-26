@@ -11,7 +11,7 @@ am4core.ready(function () {
         score: 52.7,
         gradingData: [
             {
-                title: "Sehr stark erhöhtes Risiko für psychische Erkrankungen",
+                title: "Sehr stark erhöhtes Risiko",
                 name: "Lockdown",
                 color: "#ff6961",
                 // color: "#ee1f25",
@@ -19,7 +19,7 @@ am4core.ready(function () {
                 highScore: 0
             },
             {
-                title: "Erhöhtes Risiko für psychische Erkrankungen",
+                title: "Erhöhtes Risiko",
                 name: "Pandemie",
                 color: "#fdff6e",
                 // color: "#ffcc00",
@@ -27,7 +27,7 @@ am4core.ready(function () {
                 highScore: 50
             },
             {
-                title: "Normales Risiko für psychische Erkrankungen",
+                title: "Normales Risiko",
                 name: "Keine Pandemie",
                 color: "#77dd77",
                 // color: "#0f9747",
@@ -139,7 +139,7 @@ am4core.ready(function () {
      */
     var label2 = chart.radarContainer.createChild(am4core.Label);
     label2.isMeasured = false;
-    label2.fontSize = "2vh";
+    label2.fontSize = "1.8vh";
     label2.horizontalCenter = "middle";
     label2.verticalCenter = "bottom";
     label2.text = matchingGrade.title.toUpperCase();

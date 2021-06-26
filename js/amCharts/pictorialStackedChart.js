@@ -11,41 +11,37 @@ am4core.ready(function() {
     chart.hiddenState.properties.opacity = 0; // this makes initial fade in effect
 
     chart.data = [{
-        "name": "The first",
-        "value": 354
+        "name": "Husten",
+        "value": 42
     }, {
-        "name": "The second",
-        "value": 245
+        "name": "Schnupfen",
+        "value": 31
     }, {
-        "name": "The third",
-        "value": 187
+        "name": "Fieber",
+        "value": 26
     }, {
-        "name": "The fourth",
-        "value": 123
+        "name": "Halsschmerzen",
+        "value": 22
     }, {
-        "name": "The fifth",
-        "value": 87
+        "name": "Geruchs- und Geschmacksverlust",
+        "value": 19
     }, {
-        "name": "The sixth",
-        "value": 45
-    }, {
-        "name": "The seventh",
-        "value": 23
+        "name": "Pneumonie",
+        "value": 1
     }];
 
     var series = chart.series.push(new am4charts.PictorialStackedSeries());
     series.dataFields.value = "value";
     series.dataFields.category = "name";
-    series.alignLabels = true;
+    series.alignLabels = false;
 
     series.colors.list = [
         am4core.color("#D65DB1"),
         am4core.color("#b940cf"),
-        am4core.color("#8067dc"),
-        am4core.color("#8800ff"),
         am4core.color("#6600a1"),
-        am4core.color("#83639d"),
-        am4core.color("#be88e7")
+        am4core.color("#8800ff"),
+        am4core.color("#8067dc"),
+        am4core.color("#be88e7"),
 
     ];
 
@@ -53,11 +49,14 @@ am4core.ready(function() {
     series.ticks.template.locationX = 1;
     series.ticks.template.locationY = 0.5;
 
-    series.labelsContainer.width = 200;
-    series.tooltip.pointerOrientation = "up";
+    // series.labelsContainer.width = 400;
+    // series.tooltip.pointerOrientation = "up";
+    series.labelsContainer.disabled = true;
+    series.tooltip.label.text = "{name} {value}";
 
     chart.legend = new am4charts.Legend();
     chart.legend.position = "left";
-    chart.legend.valign = "bottom";
+    chart.legend.width = am4core.percent(60);
+    chart.legend.label.text = "{name} {value}";
 
 }); // end am4core.ready()

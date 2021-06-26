@@ -5,14 +5,20 @@ am4core.ready(function () {
 
 // Add data
     chart.data = [{
-        "bezeichnung": "Gleichaltrige Kontaktperson",
-        "haeufigkeit": 58.7
+        "bezeichnung": "Alpha",
+        "haeufigkeit": 74
     }, {
-        "bezeichnung": "Ältere Kontaktperson",
-        "haeufigkeit": 26.3
+        "bezeichnung": "Beta",
+        "haeufigkeit": 1
     }, {
-        "bezeichnung": "Jüngere Kontaktperson",
-        "haeufigkeit": 14.6
+        "bezeichnung": "Gamma",
+        "haeufigkeit": 1
+    }, {
+        "bezeichnung": "Delta",
+        "haeufigkeit": 15
+    }, {
+        "bezeichnung": "Rest",
+        "haeufigkeit": 9
     }];
 
 // Add and configure Series
@@ -23,15 +29,11 @@ am4core.ready(function () {
 
 // amCharts colors: blue: #6771dc, pink: #c767dc, lightblue: #6794dc, purple: #a367dc, babyblue: #67b7dc, darkpurple: #8067dc
     pieSeries.colors.list = [
-        am4core.color("#581845"),
+        am4core.color("#BC454B"),
         am4core.color("#900c3f"),
-        am4core.color("#ff5733")
-        // am4core.color("#6794dc"), //purple
-        // am4core.color("#D65DB1"), //dark pink
-        // am4core.color("#FF6F91"), //pink
-        // am4core.color("#FF9671"), //orange
-        // am4core.color("#FFC75F"), //yellow
-        // am4core.color("#F9F871"), //neon yellow
+        am4core.color("#ff9433"),
+        am4core.color("#B90E0A"),
+        am4core.color("#5E1916")
     ];
     pieSeries.slices.template.strokeWidth = 2;
     pieSeries.slices.template.strokeOpacity = 1;
@@ -47,6 +49,6 @@ am4core.ready(function () {
 // Add a legend
     chart.legend = new am4charts.Legend();
     chart.legend.position = "right";
-    chart.legend.width = am4core.percent(100);
+    chart.legend.width = am4core.percent(50);
 
 });
