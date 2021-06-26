@@ -7,109 +7,182 @@ am4core.ready(function () {
     var chart = am4core.create("areaChart", am4charts.XYChart);
 
     chart.data = [{
-        "year": "1994",
-        "cars": 1587,
-        "motorcycles": 650,
-        "bicycles": 121
+        "date": new Date(2020, 2, 19),
+        // "date": "19/02/2020",
+        "deutschland": 100,
+        "usa": 100,
+        "europa": 100
     }, {
-        "year": "1995",
-        "cars": 1567,
-        "motorcycles": 683,
-        "bicycles": 146
+        "date": new Date(2020, 3, 2),
+        // "date": "02/03/2020",
+        "deutschland": 86.18,
+        "usa": 85.65,
+        "europa": 86.38
     }, {
-        "year": "1996",
-        "cars": 1617,
-        "motorcycles": 691,
-        "bicycles": 138
+        "date": new Date(2020, 3, 18),
+        // "date": "18/03/2020",
+        "deutschland": 61,
+        "usa": 70.7,
+        "europa": 64.77
     }, {
-        "year": "1997",
-        "cars": 1630,
-        "motorcycles": 642,
-        "bicycles": 127
+        "date": new Date(2020, 3, 23),
+        // "date": "23/03/2020",
+        "deutschland": 63.63,
+        "usa": 66.08,
+        "europa": 65.1
     }, {
-        "year": "1998",
-        "cars": 1660,
-        "motorcycles": 699,
-        "bicycles": 105
+        "date": new Date(2020, 3, 26),
+        // "date": "26/03/2020",
+        "deutschland": 72.73,
+        "usa": 75.91,
+        "europa": 74.74
     }, {
-        "year": "1999",
-        "cars": 1683,
-        "motorcycles": 721,
-        "bicycles": 109
+        "date": new Date(2020, 4, 3),
+        // "date": "03/04/2020",
+        "deutschland": 69.26,
+        "usa": 73.21,
+        "europa": 71.96
     }, {
-        "year": "2000",
-        "cars": 1691,
-        "motorcycles": 737,
-        "bicycles": 112
+        "date": new Date(2020, 4, 29),
+        // "date": "29/04/2020",
+        "deutschland": 80.79,
+        "usa": 86.56,
+        "europa": 80.8
     }, {
-        "year": "2001",
-        "cars": 1298,
-        "motorcycles": 680,
-        "bicycles": 101
+        "date": new Date(2020, 5, 14),
+        // "date": "14/05/2020",
+        "deutschland": 75.86,
+        "usa": 84.6,
+        "europa": 76.12
     }, {
-        "year": "2002",
-        "cars": 1275,
-        "motorcycles": 664,
-        "bicycles": 97
+        "date": new Date(2020, 6, 5),
+        // "date": "05/06/2020",
+        "deutschland": 93.05,
+        "usa": 90.65,
+        "europa": 87.25
     }, {
-        "year": "2003",
-        "cars": 1246,
-        "motorcycles": 648,
-        "bicycles": 93
+        "date": new Date(2020, 6, 26),
+        // "date": "26/06/2020",
+        "deutschland": 88.14,
+        "usa": 86.72,
+        "europa": 83.54
     }, {
-        "year": "2004",
-        "cars": 1318,
-        "motorcycles": 697,
-        "bicycles": 111
+        "date": new Date(2020, 7, 21),
+        // "date": "21/07/2020",
+        "deutschland": 95.31,
+        "usa": 91.89,
+        "europa": 87.84
     }, {
-        "year": "2005",
-        "cars": 1213,
-        "motorcycles": 633,
-        "bicycles": 87
+        "date": new Date(2020, 7, 31),
+        // "date": "31/07/2020",
+        "deutschland": 89.2,
+        "usa": 89.68,
+        "europa": 82.88
     }, {
-        "year": "2006",
-        "cars": 1199,
-        "motorcycles": 621,
-        "bicycles": 79
+        "date": new Date(2020, 9, 2),
+        // "date": "02/09/2020",
+        "deutschland": 95.81,
+        "usa": 98.47,
+        "europa": 86.44
     }, {
-        "year": "2007",
-        "cars": 1110,
-        "motorcycles": 210,
-        "bicycles": 81
+        "date": new Date(2020, 9, 16),
+        // "date": "16/09/2020",
+        "deutschland": 96,
+        "usa": 93.19,
+        "europa": 86.99
     }, {
-        "year": "2008",
-        "cars": 1165,
-        "motorcycles": 232,
-        "bicycles": 75
+        "date": new Date(2020, 9, 25),
+        // "date": "25/09/2020",
+        "deutschland": 90.74,
+        "usa": 92.62,
+        "europa": 82.92
     }, {
-        "year": "2009",
-        "cars": 1145,
-        "motorcycles": 219,
-        "bicycles": 88
+        "date": new Date(2020, 10, 12),
+        // "date": "12/10/2020",
+        "deutschland": 95.79,
+        "usa": 97.84,
+        "europa": 86.92
     }, {
-        "year": "2010",
-        "cars": 1163,
-        "motorcycles": 201,
-        "bicycles": 82
+        "date": new Date(2020, 10, 30),
+        // "date": "30/10/2020",
+        "deutschland": 83.91,
+        "usa": 91.78,
+        "europa": 79.94
     }, {
-        "year": "2011",
-        "cars": 1180,
-        "motorcycles": 285,
-        "bicycles": 87
+        "date": new Date(2020, 11, 11),
+        // "date": "11/11/2020",
+        "deutschland": 94.47,
+        "usa": 99.31,
+        "europa": 90.82
     }, {
-        "year": "2012",
-        "cars": 1159,
-        "motorcycles": 277,
-        "bicycles": 71
+        "date": new Date(2020, 12, 17),
+        // "date": "17/12/2020",
+        "deutschland": 98.77,
+        "usa": 100.58,
+        "europa": 93
+    }, {
+        "date": new Date(2021, 1, 8),
+        // "date": "08/01/2021",
+        "deutschland": 101.42,
+        "usa": 103.32,
+        "europa": 96.22
+    }, {
+        "date": new Date(2021, 1, 29),
+        // "date": "29/01/2021",
+        "deutschland": 98.11,
+        "usa": 101.28,
+        "europa": 92.59
+    }, {
+        "date": new Date(2021, 2, 17),
+        // "date": "17/02/2021",
+        "deutschland": 101.79,
+        "usa": 108.55,
+        "europa": 97.43
+    }, {
+        "date": new Date(2021, 2, 25),
+        // "date": "25/02/2021",
+        "deutschland": 101,
+        "usa": 103.65,
+        "europa": 96.58
+    }, {
+        "date": new Date(2021, 3, 18),
+        // "date": "18/03/2021",
+        "deutschland": 106.84,
+        "usa": 108.29,
+        "europa": 100.41
+    }, {
+        "date": new Date(2021, 4, 16),
+        // "date": "16/04/2021",
+        "deutschland": 111.4,
+        "usa": 115.44,
+        "europa": 104.34
+    }, {
+        "date": new Date(2021, 5, 4),
+        // "date": "04/05/2021",
+        "deutschland": 106.91,
+        "usa": 114.12,
+        "europa": 102.6
+    }, {
+        "date": new Date(2021, 6, 16),
+        // "date": "16/06/2021",
+        "deutschland": 111.84,
+        "usa": 115.32,
+        "europa": 109.64
+    }, {
+        "date": new Date(2021, 6, 23),
+        // "date": "23/06/2021",
+        "deutschland": 111.82,
+        "usa": 117.82,
+        "europa": 108.06
     }];
 
-    chart.dateFormatter.inputDateFormat = "yyyy";
+    // chart.dateFormatter.inputDateFormat = "dd/mm/yyyy";
     var dateAxis = chart.xAxes.push(new am4charts.DateAxis());
     dateAxis.renderer.minGridDistance = 60;
     dateAxis.startLocation = 0.5;
     dateAxis.endLocation = 0.5;
     dateAxis.baseInterval = {
-        timeUnit: "year",
+        timeUnit: "date",
         count: 1
     }
 
@@ -117,10 +190,10 @@ am4core.ready(function () {
     valueAxis.tooltip.disabled = true;
 
     var series = chart.series.push(new am4charts.LineSeries());
-    series.dataFields.dateX = "year";
-    series.name = "cars";
-    series.dataFields.valueY = "cars";
-    series.tooltipHTML = "<img href=\"pics/favicon-32x32.png\" style='vertical-align:bottom; margin-right: 10px; width:28px; height:21px;'><span style='font-size:14px; color:#000000;'><b>{valueY.value}</b></span>";
+    series.name = "Deutschland";
+    series.dataFields.dateX = "date";
+    series.dataFields.valueY = "deutschland";
+    // series.tooltipHTML = "<img href=\"pics/favicon-32x32.png\" style='vertical-align:bottom; margin-right: 10px; width:28px; height:21px;'><span style='font-size:14px; color:#000000;'><b>{valueY.value}</b></span>";
     series.tooltipText = "[#000]{valueY.value}[/]";
     series.tooltip.background.fill = am4core.color("#FFF");
     series.tooltip.getStrokeFromObject = true;
@@ -131,10 +204,9 @@ am4core.ready(function () {
     series.stacked = true;
 
     var series2 = chart.series.push(new am4charts.LineSeries());
-    series2.name = "motorcycles";
-    series2.dataFields.dateX = "year";
-    series2.dataFields.valueY = "motorcycles";
-    series2.tooltipHTML = "<img href=\"pics/favicon-32x32.png\" style='vertical-align:bottom; margin-right: 10px; width:28px; height:21px;'><span style='font-size:14px; color:#000000;'><b>{valueY.value}</b></span>";
+    series2.name = "USA";
+    series2.dataFields.dateX = "date";
+    series2.dataFields.valueY = "usa";
     series2.tooltipText = "[#000]{valueY.value}[/]";
     series2.tooltip.background.fill = am4core.color("#FFF");
     series2.tooltip.getFillFromObject = false;
@@ -146,10 +218,9 @@ am4core.ready(function () {
     series2.strokeWidth = 2;
 
     var series3 = chart.series.push(new am4charts.LineSeries());
-    series3.name = "bicycles";
-    series3.dataFields.dateX = "year";
-    series3.dataFields.valueY = "bicycles";
-    series3.tooltipHTML = "<img href=\"pics/favicon-32x32.png\" style='vertical-align:bottom; margin-right: 10px; width:28px; height:21px;'><span style='font-size:14px; color:#000000;'><b>{valueY.value}</b></span>";
+    series3.name = "Europa";
+    series3.dataFields.dateX = "date";
+    series3.dataFields.valueY = "europa";
     series3.tooltipText = "[#000]{valueY.value}[/]";
     series3.tooltip.background.fill = am4core.color("#FFF");
     series3.tooltip.getFillFromObject = false;
@@ -164,6 +235,7 @@ am4core.ready(function () {
     chart.cursor = new am4charts.XYCursor();
     chart.cursor.xAxis = dateAxis;
     chart.scrollbarX = new am4core.Scrollbar();
+    chart.scrollbarX.disabled = true;
 
 // Add a legend
     chart.legend = new am4charts.Legend();

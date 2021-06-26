@@ -37,6 +37,7 @@
     <script type="text/javascript" src="js/amCharts/donutChart.js"></script>
     <script type="text/javascript" src="js/amCharts/stackedColumnChart.js"></script>
     <script type="text/javascript" src="js/amCharts/trendlineChart.js"></script>
+    <script type="text/javascript" src="js/countdown.js"></script>
 </head>
 
 <body>
@@ -74,12 +75,12 @@
         </div>
         <div style="height: 4%;"></div>
         <div class="card text-center keyValue">
-            <div class="card-header">SARS-CoV-2 Mutationen</div>
+            <div class="card-header">Ende der aktuellen Corona-Verordnung in NRW</div>
             <div class="card-body">
-                <!--                <div class="card-text">4</div>-->
-                <div class="card-text">4</div>
+                <div class="card-text"><div id="countdown"></div></div>
+
             </div>
-            <div class="card-footer">Quelle:</div>
+            <div class="card-footer">Quelle: Ministerium für Arbeit, Gesundheit und Soziales</div>
         </div>
         <div style="height: 4%;"></div>
         <div class="card text-center keyValue">
@@ -108,11 +109,11 @@
     </div>
     <div class="col-md-5 col-sm-7 col-xs-13">
         <div class="card text-center" style="height: 41%">
-            <div class="card-header">Ansteckung durch...</div>
+            <div class="card-header">Verbreitung der Coronavirus-Varianten in Deutschland</div>
             <div class="card-body">
                 <div id="donutChart"></div>
             </div>
-            <div class="card-footer">Quelle:</div>
+            <div class="card-footer">Quelle: Robert Koch-Institut (RKI)</div>
         </div>
         <div style="height: 4%;"></div>
         <div class="card text-center" style="height: 51%">
