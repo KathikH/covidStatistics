@@ -31,6 +31,7 @@ specifiers:
   upper-case: ^2.0.2
   vuepress: ^1.7.1
   xlsx: ^0.16.9
+  xmlhttprequest: ^1.8.0
 
 dependencies:
   '@marlon360/express-queue': 1.0.3
@@ -53,6 +54,7 @@ dependencies:
   ts-node: 9.1.1_typescript@4.2.4
   upper-case: 2.0.2
   xlsx: 0.16.9
+  xmlhttprequest: 1.8.0
 
 devDependencies:
   '@types/express': 4.17.12
@@ -9830,6 +9832,11 @@ packages:
     dependencies:
       eventemitter3: 2.0.3
       xml-lexer: 0.2.2
+    dev: false
+
+  /xmlhttprequest/1.8.0:
+    resolution: {integrity: sha1-Z/4HXFwk/vOfnWX197f+dRcZaPw=}
+    engines: {node: '>=0.4.0'}
     dev: false
 
   /xregexp/2.0.0:

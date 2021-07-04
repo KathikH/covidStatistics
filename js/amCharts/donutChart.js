@@ -5,26 +5,48 @@ am4core.ready(function () {
 
 // Add data
     chart.data = [{
-        "bezeichnung": "Alpha",
-        "haeufigkeit": 74
+        "name": "Alpha",
+        "wert": 74
     }, {
-        "bezeichnung": "Beta",
-        "haeufigkeit": 1
+        "name": "Beta",
+        "wert": 1
     }, {
-        "bezeichnung": "Gamma",
-        "haeufigkeit": 1
+        "name": "Gamma",
+        "wert": 1
     }, {
-        "bezeichnung": "Delta",
-        "haeufigkeit": 15
+        "name": "Delta",
+        "wert": 15
     }, {
-        "bezeichnung": "Rest",
-        "haeufigkeit": 9
+        "name": "Rest",
+        "wert": 9
     }];
+
+    // chart.dataSource.url = "data:/../connect.js;base64,mongodb://lki:N3KQR1LPRKWLUumU@clustercovidstatistics.bbrnr.mongodb.net/covidStatistics?retryWrites=true&w=majority";
+    // chart.dataSource.events.on("parseended", function(ev) {
+    //     var map = {}; //lookup table to map questions to data elements
+    //
+    //     ev.target.data.forEach(function(item) {
+    //         Object.keys(item).forEach(function(key) {
+    //             if (key.indexOf('name') === -1) { //act on non-response keys
+    //                 if (!map[key]) {
+    //                     map[key] = {
+    //                         "name": key
+    //                     }; //create an object containing the name/question pair if it doesn't exist
+    //                 }
+    //                 map[key][item.wert] = item[key]; // assign response+value to the object (e.g. "Yes, Please": 75)
+    //             }
+    //         });
+    //     });
+    //     //remap lookup table as array
+    //     ev.target.data = Object.keys(map).map(function(question) {
+    //         return map[question];
+    //     });
+    // })
 
 // Add and configure Series
     var pieSeries = chart.series.push(new am4charts.PieSeries());
-    pieSeries.dataFields.value = "haeufigkeit";
-    pieSeries.dataFields.category = "bezeichnung";
+    pieSeries.dataFields.value = "wert";
+    pieSeries.dataFields.category = "name";
     // pieSeries.dataFields.hidden = "hidden";
 
 // amCharts colors: blue: #6771dc, pink: #c767dc, lightblue: #6794dc, purple: #a367dc, babyblue: #67b7dc, darkpurple: #8067dc
