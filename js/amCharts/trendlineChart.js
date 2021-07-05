@@ -7,81 +7,90 @@ am4core.ready(function () {
 
 // Add chart data
     chart.data = [{
-        "date": "2020-01-01",
-        "value": 10
+        "date": "2021-06-12T00:00:00.000Z",
+        "incidence": 17.64167396255456
     }, {
-        "date": "2020-01-02",
+        "date": "2021-06-13T00:00:00.000Z",
+        "incidence": 16.903397802998366
+    }, {
+        "date": "2021-06-14T00:00:00.000Z",
         "color": "#ff5733",
-        "value": 10
+        "incidence": 15.965522551444892
     }, {
-        "date": "2020-01-03",
-        "value": 12
+        "date": "2021-06-15T00:00:00.000Z",
+        "incidence": 13.757908497788257
     }, {
-        "date": "2020-01-04",
-        "value": 14
+        "date": "2021-06-16T00:00:00.000Z",
+        "incidence": 12.05049457829347
     }, {
-        "date": "2020-01-05",
-        "value": 11
+        "date": "2021-06-17T00:00:00.000Z",
+        "incidence": 10.698992292721544
     }, {
-        "date": "2020-01-06",
-        "value": 6
+        "date": "2021-06-18T00:00:00.000Z",
+        "incidence": 9.705806449409788
     }, {
-        "date": "2020-01-07",
-        "value": 7
+        "date": "2021-06-19T00:00:00.000Z",
+        "incidence": 9.034864923298457
     }, {
-        "date": "2020-01-08",
-        "value": 9
+        "date": "2021-06-20T00:00:00.000Z",
+        "incidence": 8.745085518651807
     }, {
-        "date": "2020-01-09",
-        "value": 13
+        "date": "2021-06-21T00:00:00.000Z",
+        "incidence": 8.344684930488594
     }, {
-        "date": "2020-01-10",
-        "value": 15
+        "date": "2021-06-22T00:00:00.000Z",
+        "incidence": 7.559515008354724
     }, {
-        "date": "2020-01-11",
+        "date": "2021-06-23T00:00:00.000Z",
+        "incidence": 6.883763865568762
+    }, {
+        "date": "2021-06-24T00:00:00.000Z",
+        "incidence": 6.479756064899573
+    }, {
+        "date": "2021-06-25T00:00:00.000Z",
+        "incidence": 6.143082897675249
+    }, {
+        "date": "2021-06-26T00:00:00.000Z",
+        "incidence": 5.837672238836041
+    }, {
+        "date": "2021-06-27T00:00:00.000Z",
+        "incidence": 5.77514722206581
+    }, {
+        "date": "2021-06-28T00:00:00.000Z",
+        "incidence": 5.6573116135372965
+    }, {
+        "date": "2021-06-29T00:00:00.000Z",
+        "incidence": 5.472141371563918
+    }, {
+        "date": "2021-06-30T00:00:00.000Z",
+        "incidence": 5.41442597146832
+    }, {
+        "date": "2021-07-01T00:00:00.000Z",
         "color": "#ff5733",
-        "value": 19
-    }, {
-        "date": "2020-01-12",
-        "value": 21
-    }, {
-        "date": "2020-01-13",
-        "value": 22
-    }, {
-        "date": "2020-01-14",
-        "value": 20
-    }, {
-        "date": "2020-01-15",
-        "value": 18
-    }, {
-        "date": "2020-01-16",
-        "value": 14
-    }, {
-        "date": "2020-01-17",
-        "value": 16
-    }, {
-        "date": "2020-01-18",
-        "value": 18
-    }, {
-        "date": "2020-01-19",
-        "value": 17
-    }, {
-        "date": "2020-01-20",
-        "value": 15
-    }, {
-        "date": "2020-01-21",
-        "value": 12
-    }, {
-        "date": "2020-01-22",
-        "value": 10
-    }, {
-        "date": "2020-01-23",
-        "value": 8
+        "incidence": 5.259315833711399
     }];
 
-    // chart.dataSource.url = "/ts/api.ts";
+    // chart.dataSource.url = "https://api.corona-zahlen.org/germany/history/incidence/23";
     // chart.dataSource.parser = new am4core.JSONParser();
     // chart.dataSource.parser.options.emptyAs = 0;
+    // chart.dataSource.events.on("parseended", function (ev) {
+    //     // parsed data is assigned to data source's `data` property
+    //     var data = ev.target.data;
+    //     var newData = [];
+    //     data.forEach(function (dataItem) {
+    //         var newDataItem = {};
+    //         Object.keys(dataItem).forEach(function (key) {
+    //             if (typeof dataItem[key] === "object") {
+    //                 newDataItem["date"] = dataItem[key]["@date"];
+    //             } else {
+    //                 newDataItem[key] = dataItem[key];
+    //             }
+    //         });
+    //         newData.push(newDataItem);
+    //     });
+    //     console.log(JSON.stringify(newData));
+    //     chart.dataSource.data = newData
+    // });
 
 // Create axes
     var dateAxis = chart.xAxes.push(new am4charts.DateAxis());
@@ -94,7 +103,7 @@ am4core.ready(function () {
 
 // Create series
     var series = chart.series.push(new am4charts.LineSeries());
-    series.dataFields.valueY = "value";
+    series.dataFields.valueY = "incidence";
     series.dataFields.dateX = "date";
     series.strokeWidth = 2
     series.strokeOpacity = 0.3;
@@ -108,7 +117,7 @@ am4core.ready(function () {
 
     function createTrendLine(data) {
         var trend = chart.series.push(new am4charts.LineSeries());
-        trend.dataFields.valueY = "value";
+        trend.dataFields.valueY = "incidence";
         trend.dataFields.dateX = "date";
         trend.strokeWidth = 2
         trend.stroke = am4core.color("#ff5733");
@@ -121,13 +130,8 @@ am4core.ready(function () {
     };
 
     createTrendLine([
-        {"date": "2020-01-02", "value": 10},
-        {"date": "2020-01-11", "value": 19}
-    ]);
-
-    createTrendLine([
-        {"date": "2020-01-17", "value": 16},
-        {"date": "2020-01-22", "value": 10}
+        {"date": "2021-06-14T00:00:00.000Z", "incidence": 15.965522551444892},
+        {"date": "2021-07-01T00:00:00.000Z", "incidence": 5.259315833711399}
     ]);
 
 });

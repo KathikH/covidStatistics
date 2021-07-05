@@ -21,27 +21,6 @@ am4core.ready(function () {
         "wert": 9
     }];
 
-    // chart.dataSource.url = "data:/../connect.js;base64,mongodb://lki:N3KQR1LPRKWLUumU@clustercovidstatistics.bbrnr.mongodb.net/covidStatistics?retryWrites=true&w=majority";
-    // chart.dataSource.events.on("parseended", function(ev) {
-    //     var map = {}; //lookup table to map questions to data elements
-    //
-    //     ev.target.data.forEach(function(item) {
-    //         Object.keys(item).forEach(function(key) {
-    //             if (key.indexOf('name') === -1) { //act on non-response keys
-    //                 if (!map[key]) {
-    //                     map[key] = {
-    //                         "name": key
-    //                     }; //create an object containing the name/question pair if it doesn't exist
-    //                 }
-    //                 map[key][item.wert] = item[key]; // assign response+value to the object (e.g. "Yes, Please": 75)
-    //             }
-    //         });
-    //     });
-    //     //remap lookup table as array
-    //     ev.target.data = Object.keys(map).map(function(question) {
-    //         return map[question];
-    //     });
-    // })
 
 // Add and configure Series
     var pieSeries = chart.series.push(new am4charts.PieSeries());
