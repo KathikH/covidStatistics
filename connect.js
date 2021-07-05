@@ -20,6 +20,7 @@ db.once("open", async function () {
     const States = mongoose.model("states", new Schema({}));
     const Incidence = mongoose.model("incidence", new Schema({}));
     const Vaccinations = mongoose.model("vaccinations", new Schema({}));
+    const Germany = mongoose.model("germany", new Schema({}));
 
     // Die "Tabelle" auf die wir schauen wollen
     let kennzahlen = db.collection("kennzahlen");
@@ -27,6 +28,7 @@ db.once("open", async function () {
     let states = db.collection("states");
     let incidence = db.collection("incidence");
     let vaccinations = db.collection("vaccinations");
+    let germany = db.collection("germany");
 
     // Alte Objekte entfernen
     const deleteQuery = kennzahlen.deleteMany({/*hashtag: "Covid19-Daten"*/});
@@ -39,12 +41,13 @@ db.once("open", async function () {
     console.dir((await deleteQuery3).deletedCount + " alte Objekte entfernt.");
     const deleteQuery4 = vaccinations.deleteMany({/*hashtag: "Covid19-Daten"*/});
     console.dir((await deleteQuery4).deletedCount + " alte Objekte entfernt.");
+    const deleteQuery5 = germany.deleteMany({/*hashtag: "Covid19-Daten"*/});
+    console.dir((await deleteQuery5).deletedCount + " alte Objekte entfernt.");
 
     // Kennzahldaten
     const geburtenrate = {
         name: "Geburtenrate 2020",
         wert: "-0,6%"
-        // ,hashtag: "Covid19-Daten"
     };
 
     const straftaten = {
@@ -111,21 +114,21 @@ db.once("open", async function () {
         await states.insertOne(resp.data.data.ST);
         await states.insertOne(resp.data.data.TH);
         console.log("Bundeslanddaten erfolgreich hinzugefügt.");
-    } catch(err) {
+    } catch (err) {
         console.log("Error calling API:", err);
         return {ok: false};
     }
 
     //API: Trendline
     try {
-        const resp = await axios.get("https://api.corona-zahlen.org/germany/history/cases/23");
+        const resp = await axios.get("https://api.corona-zahlen.org/germany/history/incidence/23");
         if (resp.status !== 200) {
             throw new Error(`expected status code to be 200, but got ${resp.status}`)
         }
         console.log(resp.data.data);
         await incidence.insertMany(resp.data.data);
         console.log("Inzidenzdaten erfolgreich hinzugefügt.");
-    } catch(err) {
+    } catch (err) {
         console.log("Error calling API:", err);
         return {ok: false};
     }
@@ -139,7 +142,21 @@ db.once("open", async function () {
         console.log(resp.data.data);
         await vaccinations.insertMany([resp.data.data]);
         console.log("Impfdaten erfolgreich hinzugefügt.");
-    } catch(err) {
+    } catch (err) {
+        console.log("Error calling API:", err);
+        return {ok: false};
+    }
+
+    //API: Deutschland
+    try {
+        const resp = await axios.get("https://api.corona-zahlen.org/germany");
+        if (resp.status !== 200) {
+            throw new Error(`expected status code to be 200, but got ${resp.status}`)
+        }
+        console.log(resp.data);
+        await germany.insertMany([resp.data]);
+        console.log("Impfdaten erfolgreich hinzugefügt.");
+    } catch (err) {
         console.log("Error calling API:", err);
         return {ok: false};
     }
@@ -151,10 +168,10 @@ db.once("open", async function () {
     }
 
     // SELECT / Ausgabe einiger Werte
-    await kennzahlen.find({hashtag: "Covid19-Daten"},
+    await kennzahlen.find(
         function (err, objects) {
             if (err) return console.log(err);
-            console.dir("Dies sind nun die Covid19-Daten:")
+            console.dir("Dies sind nun die Covid19-Kennzahlen:")
             objects.forEach(function (object) {
                 console.log(object.name);
                 console.log(object.wert);
