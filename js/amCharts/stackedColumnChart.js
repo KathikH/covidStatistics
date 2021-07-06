@@ -72,6 +72,9 @@ am4core.ready(function () {
     chart.colors.step = 2;
     chart.padding(30, 30, 10, 30);
     chart.legend = new am4charts.Legend();
+    // chart.legend.width = am4core.percent(100);
+    // chart.legend.height = am4core.percent(60);
+    // chart.legend.scrollable = true;
 
     var categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
     categoryAxis.dataFields.category = "category";

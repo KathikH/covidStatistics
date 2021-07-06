@@ -28,22 +28,23 @@ am4core.ready(function () {
 // Make map load polygon data (state shapes and names) from GeoJSON
     polygonSeries.useGeodata = true;
 
-    polygonSeries.data = [{id: "DE-BW", value: 80, name:"Baden-Württemberg"},
-        {id: "DE-BY", value: 63, name: "Bayern"},
-        {id: "DE-BE", value: 55, name: "Berlin"},
-        {id: "DE-BB", value: 48, name: "Brandenburg"},
-        {id: "DE-HB", value: 56, name: "Bremen"},
-        {id: "DE-HH", value: 35, name: "Hamburg"},
-        {id: "DE-HE", value: 75, name: "Hessen"},
-        {id: "DE-MV", value: 41, name: "Mecklenburg-Vorpommern"},
-        {id: "DE-NI", value: 46, name: "Niedersachsen"},
-        {id: "DE-NW", value: 69, name: "Nordrhein-Westfalen"},
-        {id: "DE-RP", value: 56, name: "Rheinland-Pfalz"},
-        {id: "DE-SL", value: 81, name: "Saarland"},
-        {id: "DE-SN", value: 82, name: "Sachsen"},
-        {id: "DE-ST", value: 54, name: "Sachsen-Anhalt"},
-        {id: "DE-SH", value: 32, name: "Schleswig-Holstein"},
-        {id: "DE-TH", value: 101, name: "Thüringen"}
+    polygonSeries.data = [
+        {id: "DE-BW", value: 5.125944178197639, name:"Baden-Württemberg"},
+        {id: "DE-BY", value: 5.447728209715745, name: "Bayern"},
+        {id: "DE-BE", value: 5.341340256727705, name: "Berlin"},
+        {id: "DE-BB", value: 2.4188179276440356, name: "Brandenburg"},
+        {id: "DE-HB", value: 8.220762710620344, name: "Bremen"},
+        {id: "DE-HH", value: 7.632955529101861, name: "Hamburg"},
+        {id: "DE-HE", value: 7.665296879174565, name: "Hessen"},
+        {id: "DE-MV", value: 1.305858079343937, name: "Mecklenburg-Vorpommern"},
+        {id: "DE-NI", value: 3.665428677513333, name: "Niedersachsen"},
+        {id: "DE-NW", value: 5.622040314765166, name: "Nordrhein-Westfalen"},
+        {id: "DE-RP", value: 5.276138687213645, name: "Rheinland-Pfalz"},
+        {id: "DE-SL", value: 6.079723413116192, name: "Saarland"},
+        {id: "DE-SN", value: 1.6699529539871476, name: "Sachsen"},
+        {id: "DE-ST", value: 1.0479400687630935, name: "Sachsen-Anhalt"},
+        {id: "DE-SH", value: 3.5126712728577614, name: "Schleswig-Holstein"},
+        {id: "DE-TH", value: 3.562425411717942, name: "Thüringen"}
     ];
 
 // Set up heat legend
@@ -71,7 +72,7 @@ am4core.ready(function () {
 
 // Configure series tooltip
     var polygonTemplate = polygonSeries.mapPolygons.template;
-    polygonTemplate.tooltipText = "{name}: {value}";
+    polygonTemplate.tooltipText = "{name}: {value.formatNumber('#.00')}";
     polygonTemplate.nonScalingStroke = true;
     polygonTemplate.strokeWidth = 0.5;
 

@@ -49,7 +49,7 @@ am4core.ready(function () {
 
 // Add a legend
     chart.legend = new am4charts.Legend();
-    chart.legend.position = "right";
-    chart.legend.width = am4core.percent(50);
-
+    chart.legend.position = "left";
+    chart.legend.width = am4core.percent(60);
+    chart.legend.scrollable = true;
 });

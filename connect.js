@@ -21,6 +21,7 @@ db.once("open", async function () {
     const Incidence = mongoose.model("incidence", new Schema({}));
     const Vaccinations = mongoose.model("vaccinations", new Schema({}));
     const Germany = mongoose.model("germany", new Schema({}));
+    // const Map = mongoose.model("map", new Schema({}));
 
     // Die "Tabelle" auf die wir schauen wollen
     let kennzahlen = db.collection("kennzahlen");
@@ -29,6 +30,7 @@ db.once("open", async function () {
     let incidence = db.collection("incidence");
     let vaccinations = db.collection("vaccinations");
     let germany = db.collection("germany");
+    // let map = db.collection("map");
 
     // Alte Objekte entfernen
     const deleteQuery = kennzahlen.deleteMany({/*hashtag: "Covid19-Daten"*/});
@@ -43,6 +45,8 @@ db.once("open", async function () {
     console.dir((await deleteQuery4).deletedCount + " alte Objekte entfernt.");
     const deleteQuery5 = germany.deleteMany({/*hashtag: "Covid19-Daten"*/});
     console.dir((await deleteQuery5).deletedCount + " alte Objekte entfernt.");
+    // const deleteQuery6 = map.deleteMany({/*hashtag: "Covid19-Daten"*/});
+    // console.dir((await deleteQuery6).deletedCount + " alte Objekte entfernt.");
 
     // Kennzahldaten
     const geburtenrate = {
@@ -160,6 +164,20 @@ db.once("open", async function () {
         console.log("Error calling API:", err);
         return {ok: false};
     }
+
+    // //API: Map
+    // try {
+    //     const resp = await axios.get("https://api.corona-zahlen.org/map/states");
+    //     if (resp.status !== 200) {
+    //         throw new Error(`expected status code to be 200, but got ${resp.status}`)
+    //     }
+    //     console.log(resp.data);
+    //     await germany.insertMany([resp.data]);
+    //     console.log("Impfdaten erfolgreich hinzugefügt.");
+    // } catch (err) {
+    //     console.log("Error calling API:", err);
+    //     return {ok: false};
+    // }
 
     // INSERT INTO
     async function insertDocIntoCollection(doc, collection) {

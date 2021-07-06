@@ -98,6 +98,7 @@ am4core.ready(function () {
     dateAxis.renderer.grid.template.location = 0.5;
     dateAxis.dateFormatter.inputDateFormat = "yyyy-MM-dd";
     dateAxis.renderer.minGridDistance = 50;
+    dateAxis.tooltipDateFormat = "MM dd, yyyy";
 
     var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
 
@@ -114,6 +115,10 @@ am4core.ready(function () {
     bullet.strokeWidth = 2;
     bullet.fill = am4core.color("#581845");
     bullet.stroke = am4core.color("#fff")
+    bullet.tooltipText = "{dateX}\n[bold font-size: 17px]Inzidenz: {valueY}[/]";
+
+    var hoverState = bullet.states.create("hover");
+    hoverState.properties.scale = 1.7;
 
     function createTrendLine(data) {
         var trend = chart.series.push(new am4charts.LineSeries());
@@ -127,6 +132,12 @@ am4core.ready(function () {
         bullet.strokeWidth = 2;
         bullet.stroke = am4core.color("#fff")
         bullet.circle.fill = trend.stroke;
+        bullet.tooltipText = "{dateX}\n[bold font-size: 17px]Inzidenz: {valueY}[/]";
+
+        var hoverState = bullet.states.create("hover");
+        hoverState.properties.scale = 1.7;
+
+        return trend;
     };
 
     createTrendLine([

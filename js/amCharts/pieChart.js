@@ -26,7 +26,7 @@ am4core.ready(function () {
         am4core.color("#4f6137")
     ];
 
-    chart.radius = am4core.percent(95);
+    chart.radius = am4core.percent(85);
 
 // Create custom legend
     chart.events.on("ready", function (event) {
