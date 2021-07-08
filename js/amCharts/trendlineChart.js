@@ -66,8 +66,17 @@ am4core.ready(function () {
         "incidence": 5.41442597146832
     }, {
         "date": "2021-07-01T00:00:00.000Z",
-        "color": "#ff5733",
         "incidence": 5.259315833711399
+    }, {
+        "date": "2021-07-02T00:00:00.000Z",
+        "incidence": 5.191981200266534
+    }, {
+        "date": "2021-07-03T00:00:00.000Z",
+        "incidence": 5.212422071133726
+    }, {
+        "date": "2021-07-04T00:00:00.000Z",
+        "color": "#ff5733",
+        "incidence": 5.200398029447143
     }];
 
     // chart.dataSource.url = "https://api.corona-zahlen.org/germany/history/incidence/23";
@@ -98,7 +107,7 @@ am4core.ready(function () {
     dateAxis.renderer.grid.template.location = 0.5;
     dateAxis.dateFormatter.inputDateFormat = "yyyy-MM-dd";
     dateAxis.renderer.minGridDistance = 50;
-    dateAxis.tooltipDateFormat = "MM dd, yyyy";
+    // dateAxis.tooltipDateFormat = "MM dd, yyyy";
 
     var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
 
@@ -142,7 +151,7 @@ am4core.ready(function () {
 
     createTrendLine([
         {"date": "2021-06-14T00:00:00.000Z", "incidence": 15.965522551444892},
-        {"date": "2021-07-01T00:00:00.000Z", "incidence": 5.259315833711399}
+        {"date": "2021-07-04T00:00:00.000Z", "incidence": 5.200398029447143}
     ]);
 
 });
